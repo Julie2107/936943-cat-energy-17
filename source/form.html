@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>HTML Academy: Кэт энерджи</title>
+  </head>
+  <body>
+    <header>
+      <div class="nav-header">
+        <a class="nav-header__logo" href="index.html">
+          <img class="nav-header__logotype" src="http://placehold.it/33x38" alt="логотип Кэтенерджи" width="33" height="38">
+          <img class="nav-header__brandname" src="http://placehold.it/101x18" alt="логотип Кэтенерджи" width="101" height="18">
+        </a>
+        <nav class="nav-header__nav main-nav">
+          <button class="main-nav__toggle" type="button" name="button"><span class="visually-hidden">Открыть меню</span></button>
+          <ul class="main-nav__list">
+            <li class="main-nav__item">
+              <a href="index.html">Главная</a>
+            </li>
+            <li class="main-nav__item">
+              <a href="catalogue.html">Каталог продукции</a>
+            </li>
+            <li class="main-nav__item">
+              <a href="form.html">Подбор программы</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <section class="main-header">
+        <h1 class="main-header__title">подбор программы</h1>
+        <p class="main-header__text">Заполните анкету и мы подберем программу питания для вашего кота</p>
+      </section>
+      <form class="order-form" action="https://echo.htmlacademy.ru" method="get">
+        <fieldset class="order-form__fieldset">
+          <ul class="order-form__list">
+            <li class="order-form__item">
+              <label class="order-form__label" for="name-field">имя*:</label>
+              <input type="text" id="name-field" name="name" placeholder="Барсик" required="">
+            </li>
+            <li class="order-form__item initials__item">
+              <label class="order-form__label" for="weight-field">Вес (кг):*</label>
+              <input type="number" id="weight-field" name="weight" placeholder="7" required="">
+            </li>
+            <li class="order-form__item initials__item">
+              <label class="order-form__label" for="age-field">Возраст (лет):</label>
+              <input type="number" id="age-field" name="age" placeholder="7">
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset class="order-form__fieldset">
+          <ul class="order-form__list">
+            <li class="order-form__item">
+              <input id="weightloss" type="radio" name="goal">
+              <label class="order-form__label" for="weightloss">похудение</label>
+            </li>
+            <li class="order-form__item">
+              <input id="weightgain" type="radio" name="goal">
+              <label class="order-form__label" for="weightgain">набор массы</label>
+            </li>
+            <li class="order-form__item">
+              <input id="advise" type="radio" name="goal">
+              <label class="order-form__label" for="advise">Не знаю (Нужен ваш совет)</label>
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset class="order-form__fieldset">
+          <legend class="order-form__legend">Контактные данные (владельца кота)</legend>
+          <ul class="order-form__list">
+            <li class="order-form__item">
+              <input type="email" id="email-field" name="email" placeholder="kuklachev@gmail.com" required="">
+              <label class="order-form__label" for="email-field">E-mail:*</label>
+            </li>
+            <li class="order-form__item">
+              <input type="tel" id="tel-field" name="mobile" placeholder="8 (960) 900-60-90" required="">
+              <label class="order-form__label" for="tel-field">Вес (кг):*</label>
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset class="order-form__fieldset">
+          <legend class="order-form__legend">Комментарий</legend>
+          <textarea name="comments" rows="8" cols="80">Расскажите обо всех повадках кота</textarea>
+        </fieldset>
+        <fieldset class="order-form__fieldset">
+          <legend class="order-form__legend">Дополнительно</legend>
+          <ul class="order-form__list">
+            <li class="order-form__item">
+              <input id="sweetener" type="checkbox" name="sweetener" checked>
+              <label class="order-form__label" for="sweetener"></label>
+            </li>
+            <li class="order-form__item">
+              <input id="water" type="checkbox" name="water">
+              <label class="order-form__label" for="water">Питьевая вода</label>
+            </li>
+            <li class="order-form__item">
+              <input id="milk" type="checkbox" name="milk">
+              <label class="order-form__label" for="milk">Молоко</label>
+            </li>
+            <li class="order-form__item">
+              <input id="vitamins" type="checkbox" name="vitamins">
+              <label class="order-form__label" for="vitamins">Витамины</label>
+            </li>
+          </ul>
+        </fieldset>
+        <button type="submit" name="button">отправить заявку</button>
+        <p class="order-form__note">* — Обязательные поля</p>
+      </form>
+    </main>
+    <footer class="footer">
+      <section class="footer__contacts contacts">
+        <h2 class="visually-hidden">Наш адрес</h2>
+        <p class="contacts__invite">приглашаем к сотрудничеству дилеров!</p>
+        <p class="contacts__adress">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5978266653062!2d30.321297716096982!3d59.93881538187623!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310e354288bb%3A0xbbeecda9980bbc58!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE4LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1558004477092!5m2!1sru!2sru" style="border:0" allowfullscreen=""></iframe>
+      </section>
+      <section class="footer__main">
+        <a class="footer__logo" href="index.html"> <img class="footer__logo-image" src="http://placehold.it/128x24" alt="логотип кэтенерджи" width="128" height="24"></a>
+        <ul class="footer__social">
+          <li class="footer__social-item">
+            <a href="vk.com"> <span class="visually-hidden">Мы в ВК</span><img src="http://placehold.it/45x45" alt="Мы в Фейсбуке" width="45" height="45"> </a>
+          </li>
+          <li class="footer__social-item">
+            <a href="instagram.com"><span class="visually-hidden">Мы в Инстаграмме</span><img src="http://placehold.it/45x45" alt="Мы в Фейсбуке" width="45" height="45"></a>
+          </li>
+          <li class="footer__social-item">
+            <a href="facebook.com"> <span class="visually-hidden">Мы в Фейсбуке</span> <img src="http://placehold.it/45x45" alt="Мы в Фейсбуке" width="45" height="45"> </a>
+          </li>
+        </ul>
+        <div class="footer__copyright">
+          <a class="footer__academy" href="https://up.htmlacademy.ru/adaptive/17/">HTML Academy</a>
+          <a class="footer__academy-logo" href="https://up.htmlacademy.ru/adaptive/17/">HTML Academy</a>
+        </div>
+      </section>
+    </footer>
+  </body>
+</html>
