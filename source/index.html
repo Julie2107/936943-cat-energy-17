@@ -3,15 +3,17 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Кэт энерджи</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-    <header>
-      <div class="nav-header">
-        <a class="nav-header__logo" href="index.html">
-          <img class="nav-header__logotype" src="http://placehold.it/33x38" alt="логотип Кэтенерджи" width="33" height="38">
-          <img class="nav-header__brandname" src="http://placehold.it/101x18" alt="логотип Кэтенерджи" width="101" height="18">
+    <header class="page-header">
+      <div class="page-header__wrapper container">
+        <a class="page-header__logo" href="index.html">
+          <img class="page-header__logotype" src="http://placehold.it/33x38" alt="логотип Кэтенерджи" width="33" height="38">
+          <img class="page-header__brandname" src="http://placehold.it/101x18" alt="логотип Кэтенерджи" width="101" height="18">
         </a>
-        <nav class="nav-header__nav main-nav">
+        <nav class="page-header__nav main-nav">
           <button class="main-nav__toggle" type="button" name="button"><span class="visually-hidden">Открыть меню</span></button>
           <ul class="main-nav__list">
             <li class="main-nav__item">
@@ -26,14 +28,17 @@
           </ul>
         </nav>
       </div>
-      <div class="main-header">
-        <h1 class="main-header__title">Функциональное питание для котов</h1>
-        <b>Занялся собой? Займись котом!</b>
-        <a class="site-button main-header__button" href="form.html"></a>
-      </div>
     </header>
     <main>
-      <section class="options">
+      <div class="main-header main-header--index">
+        <div class="main-header__wrapper container">
+          <h1 class="main-header__title main-header__title--index">Функциональное питание для котов</h1>
+          <p class="main-header__text main-header__text--index">Занялся собой? Займись котом!</p>
+          <img src="img/index-can-mobile@1x.png" alt="функциональное питание для котов" width="280" height="270">
+          <a class="site-button main-header__button" href="form.html">подобрать программу</a>
+        </div>
+      </div>
+      <section class="options container">
         <h2 class="visually-hidden">Наши возможности</h2>
         <ul class="options__list ways">
           <li class="options__item ways__dir">
@@ -41,14 +46,14 @@
             <p class="ways__desc">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
             <a class="ways__link" href="catalogue.html">Каталог Slim</a>
           </li>
-          <li class="options__item">
+          <li class="options__item  ways__dir">
             <h3 class="ways__title">Набор массы</h3>
             <p class="ways__desc">Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!</p>
             <a class="ways__link" href="catalogue.html">Каталог pro</a>
           </li>
         </ul>
       </section>
-      <section class="features">
+      <section class="features container">
         <h2 class="features__title">Как это работает</h2>
         <ul class="features__list">
           <li class="features__item">Функциональное питание содержит только полезные питательные вещества.</li>
@@ -58,54 +63,60 @@
         </ul>
       </section>
       <section class="case">
-        <h2 class="case__title">Живой пример</h2>
-        <p class="case__desc">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
-        <ul class="case__param">
-          <li class="case__param-item">
-            <strong>5кг</strong>
-            <span>снижение веса</span>
-          </li>
-          <li class="case__param-item">
-            <strong>60дней</strong>
-            <span>затрачено времени</span>
-          </li>
-        </ul>
-        <p>Затраты на питание: 15 000 руб.</p>
-        <div class="case__slider slider">
-          <input id="before" type="radio" name="case-toggle">
-          <input id="after" type="radio" name="case-toggle">
-          <div class="slider__toggles">
-            <label class="slider__toggle-left" for="before">Было</label>
-            <label class="slider__toggle-right" for="after">Стало</label>
+        <div class="case__wrapper container">
+          <h2 class="case__title">Живой пример</h2>
+          <p class="case__desc">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
+          <ul class="case__param">
+            <li class="case__param-item">
+              <strong>5 кг</strong>
+              <span>снижение веса</span>
+            </li>
+            <li class="case__param-item">
+              <strong>60 дней</strong>
+              <span>затрачено времени</span>
+            </li>
+          </ul>
+          <p class="case__expences">Затраты на питание: 15 000 руб.</p>
+          <div class="case__slider slider">
+            <input id="before" type="radio" name="case-toggle">
+            <input id="after" type="radio" name="case-toggle">
+            <img src="http://placehold.it/311x232" alt="Толстый Борис" width="311" height="232">
+            <img src="http://placehold.it/251x240" alt="Нетолстый Борис" width="251" height="240">
+            <div class="slider__toggles">
+              <label class="slider__toggle-left" for="before">Было</label>
+              <label class="slider__toggle-right" for="after">Стало</label>
+            </div>
           </div>
-          <img src="http://placehold.it/311x232" alt="Толстый Борис" width="311" height="232">
-          <img src="http://placehold.it/251x240" alt="Нетолстый Борис" width="251" height="240">
         </div>
       </section>
     </main>
     <footer class="footer">
-      <section class="footer__contacts contacts">
+      <section class="footer__contacts ">
         <h2 class="visually-hidden">Наш адрес</h2>
-        <p class="contacts__invite">приглашаем к сотрудничеству дилеров!</p>
-        <p class="contacts__adress">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5978266653062!2d30.321297716096982!3d59.93881538187623!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310e354288bb%3A0xbbeecda9980bbc58!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE4LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1558004477092!5m2!1sru!2sru" style="border:0" allowfullscreen=""></iframe>
+        <div class="footer__adress container contacts">
+          <p class="contacts__invite">приглашаем к сотрудничеству дилеров!</p>
+          <p class="contacts__adress">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+        </div>
+        <iframe class="footer__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5978266653062!2d30.321297716096982!3d59.93881538187623!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310e354288bb%3A0xbbeecda9980bbc58!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE4LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1558004477092!5m2!1sru!2sru" style="border:0" allowfullscreen=""></iframe>
       </section>
       <section class="footer__main">
-        <a class="footer__logo" href="index.html"> <img class="footer__logo-image" src="http://placehold.it/128x24" alt="логотип кэтенерджи" width="128" height="24"></a>
-        <ul class="footer__social">
-          <li class="footer__social-item">
-            <a href="vk.com"> <span class="visually-hidden">Мы в ВК</span><img src="http://placehold.it/45x45" alt="Мы в Фейсбуке" width="45" height="45"> </a>
-          </li>
-          <li class="footer__social-item">
-            <a href="instagram.com"><span class="visually-hidden">Мы в Инстаграмме</span><img src="http://placehold.it/45x45" alt="Мы в Фейсбуке" width="45" height="45"></a>
-          </li>
-          <li class="footer__social-item">
-            <a href="facebook.com"> <span class="visually-hidden">Мы в Фейсбуке</span> <img src="http://placehold.it/45x45" alt="Мы в Фейсбуке" width="45" height="45"> </a>
-          </li>
-        </ul>
-        <div class="footer__copyright">
-          <a class="footer__academy" href="https://up.htmlacademy.ru/adaptive/17/">HTML Academy</a>
-          <a class="footer__academy-logo" href="https://up.htmlacademy.ru/adaptive/17/">HTML Academy</a>
+        <div class="footer__wrapper container">
+          <a class="footer__logo" href="index.html"> <img class="footer__logo-image" src="http://placehold.it/128x24" alt="логотип кэтенерджи" width="128" height="24"></a>
+          <ul class="footer__social">
+            <li class="footer__social-item">
+              <a href="vk.com"> <span class="visually-hidden">Мы в ВК</span><img src="http://placehold.it/22x12" alt="Мы в Фейсбуке" width="22" height="12"> </a>
+            </li>
+            <li class="footer__social-item">
+              <a href="instagram.com"><span class="visually-hidden">Мы в Инстаграмме</span><img src="http://placehold.it/16x16" alt="Мы в Фейсбуке" width="16" height="16"></a>
+            </li>
+            <li class="footer__social-item">
+              <a href="facebook.com"> <span class="visually-hidden">Мы в Фейсбуке</span> <img src="http://placehold.it/10x19" alt="Мы в Фейсбуке" width="10" height="1"> </a>
+            </li>
+          </ul>
+          <div class="footer__copyright">
+            <a class="footer__academy" href="https://up.htmlacademy.ru/adaptive/17/">HTML Academy</a>
+            <a class="footer__academy-logo" href="https://up.htmlacademy.ru/adaptive/17/">HTML Academy</a>
+          </div>
         </div>
       </section>
     </footer>
