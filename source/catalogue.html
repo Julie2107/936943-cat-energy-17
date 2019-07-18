@@ -3,15 +3,17 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Кэт энерджи</title>
+    <link rel="stylesheet" href="css/style.css">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
   </head>
   <body>
-    <header>
-      <div class="nav-header">
-        <a class="nav-header__logo" href="index.html">
-          <img class="nav-header__logotype" src="http://placehold.it/33x38" alt="логотип Кэтенерджи" width="33" height="38">
-          <img class="nav-header__brandname" src="http://placehold.it/101x18" alt="логотип Кэтенерджи" width="101" height="18">
+    <header class="page-header">
+      <div class="page-header__wrapper container">
+        <a class="page-header__logo" href="index.html">
+          <img class="page-header__logotype" src="http://placehold.it/33x38" alt="логотип Кэтенерджи" width="33" height="38">
+          <img class="page-header__brandname" src="http://placehold.it/101x18" alt="логотип Кэтенерджи" width="101" height="18">
         </a>
-        <nav class="nav-header__nav main-nav">
+        <nav class="page-header__nav main-nav">
           <button class="main-nav__toggle" type="button" name="button"><span class="visually-hidden">Открыть меню</span></button>
           <ul class="main-nav__list">
             <li class="main-nav__item">
@@ -28,7 +30,9 @@
       </div>
     </header>
     <main>
-      <h1 class="main-title">Каталог продукции</h1>
+      <div class="main-header container">
+        <h1 class="main-header__title">Каталог продукции</h1>
+      </div>
       <section class="range">
         <h2 class="visually-hidden">Основной ассортимент</h2>
         <ul class="range__list">
@@ -166,74 +170,78 @@
             <a class="site-button good__button" href="order.html">заказать</a>
           </li>
         </ul>
-        <div class="range__ajax">
+        <div class="good good--ajax">
           <a href="catalogue-next.html">+</a>
-          <p class="range__more">показать еще 100500 товаров</p>
-          <p class="range__text">На самом деле вкусов гораздо больше!</p>
-          <button class="site-button range__button" type="button" name="button">показать все</button>
+          <p class="good__name">показать еще 100500 товаров</p>
+          <p class="good__desc">На самом деле вкусов гораздо больше!</p>
+          <button class="site-button good__button good__button--ajax" type="button" name="button">показать все</button>
         </div>
       </section>
-      <section class="add-range">
+      <section class="add-range container">
         <h2 class="add-range__title">Дополнительные товары</h2>
         <ul class="add-range__list">
-          <li class="add-range__item">
-            <a class="add-range__title" href="good.html">Сахарозаменитель</a>
-            <div class="add-range__desc">
-              <span class="add-range__volume"></span>
-              <span class="add-range__price"></span>
+          <li class="add-range__item good good--add">
+            <a class="good__name good__name--add" href="good.html">Сахарозаменитель</a>
+            <div class="good__desc good__desc--add">
+              <span class="add-range__volume">1 упаковка (100 г)</span>
+              <span class="add-range__price">200 Р.</span>
             </div>
-            <a class="site-button add-range__button" href="order.html">заказать</a>
+            <a class="site-button good__button" href="order.html">заказать</a>
           </li>
-          <li class="add-range__item">
-            <a class="add-range__title" href="good.html">Питьевая вода</a>
-            <div class="add-range__desc">
+          <li class="add-range__item good good--add">
+            <a class="good__name good__name--add" href="good.html">Питьевая вода</a>
+            <div class="good__desc good__desc--add">
               <span class="add-range__volume">5 литров</span>
               <span class="add-range__price">50 Р.</span>
             </div>
-            <a class="site-button add-range__button" href="order.html">заказать</a>
+            <a class="site-button good__button" href="order.html">заказать</a>
           </li>
-          <li class="add-range__item">
-            <a class="add-range__title" href="good.html">Молоко</a>
-            <div class="add-range__desc">
+          <li class="add-range__item good good--add">
+            <a class="good__name good__name--add" href="good.html">Молоко</a>
+            <div class="good__desc good__desc--add">
               <span class="add-range__volume">1 литр</span>
               <span class="add-range__price">100 Р.</span>
             </div>
-            <a class="site-button add-range__button" href="order.html">заказать</a>
+            <a class="site-button good__button" href="order.html">заказать</a>
           </li>
-          <li class="add-range__item">
-            <a class="add-range__title" href="good.html">Витамины</a>
-            <div class="add-range__desc">
+          <li class="add-range__item good good--add">
+            <a class="good__name good__name--add" href="good.html">Витамины</a>
+            <div class="good__desc good__desc--add">
               <span class="add-range__volume">1 упаковка (30 г)</span>
               <span class="add-range__price">300 Р.</span>
             </div>
-            <a class="site-button add-range__button" href="order.html">заказать</a>
+            <a class="site-button good__button" href="order.html">заказать</a>
           </li>
         </ul>
       </section>
     </main>
     <footer class="footer">
-      <section class="footer__contacts contacts">
+      <section class="footer__contacts ">
         <h2 class="visually-hidden">Наш адрес</h2>
-        <p class="contacts__invite">приглашаем к сотрудничеству дилеров!</p>
-        <p class="contacts__adress">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5978266653062!2d30.321297716096982!3d59.93881538187623!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310e354288bb%3A0xbbeecda9980bbc58!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE4LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1558004477092!5m2!1sru!2sru" style="border:0" allowfullscreen=""></iframe>
+        <div class="footer__adress container contacts">
+          <p class="contacts__invite">приглашаем к сотрудничеству дилеров!</p>
+          <p class="contacts__adress">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+        </div>
+        <iframe class="footer__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5978266653062!2d30.321297716096982!3d59.93881538187623!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310e354288bb%3A0xbbeecda9980bbc58!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE4LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1558004477092!5m2!1sru!2sru" style="border:0" allowfullscreen=""></iframe>
       </section>
       <section class="footer__main">
-        <a class="footer__logo" href="index.html"> <img class="footer__logo-image" src="http://placehold.it/128x24" alt="логотип кэтенерджи" width="128" height="24"></a>
-        <ul class="footer__social">
-          <li class="footer__social-item">
-            <a href="vk.com"> <span class="visually-hidden">Мы в ВК</span><img src="http://placehold.it/45x45" alt="Мы в Фейсбуке" width="45" height="45"> </a>
-          </li>
-          <li class="footer__social-item">
-            <a href="instagram.com"><span class="visually-hidden">Мы в Инстаграмме</span><img src="http://placehold.it/45x45" alt="Мы в Фейсбуке" width="45" height="45"></a>
-          </li>
-          <li class="footer__social-item">
-            <a href="facebook.com"> <span class="visually-hidden">Мы в Фейсбуке</span> <img src="http://placehold.it/45x45" alt="Мы в Фейсбуке" width="45" height="45"> </a>
-          </li>
-        </ul>
-        <div class="footer__copyright">
-          <a class="footer__academy" href="https://up.htmlacademy.ru/adaptive/17/">HTML Academy</a>
-          <a class="footer__academy-logo" href="https://up.htmlacademy.ru/adaptive/17/">HTML Academy</a>
+        <div class="footer__wrapper container">
+          <a class="footer__logo" href="index.html"> <img class="footer__logo-image" src="http://placehold.it/128x24" alt="логотип кэтенерджи" width="128" height="24"></a>
+          <ul class="footer__social">
+            <li class="footer__social-item">
+              <a href="vk.com"> <span class="visually-hidden">Мы в ВК</span><img src="http://placehold.it/22x12" alt="Мы в Фейсбуке" width="22" height="12"> </a>
+            </li>
+            <li class="footer__social-item">
+              <a href="instagram.com"><span class="visually-hidden">Мы в Инстаграмме</span><img src="http://placehold.it/16x16" alt="Мы в Фейсбуке" width="16" height="16"></a>
+            </li>
+            <li class="footer__social-item">
+              <a href="facebook.com"> <span class="visually-hidden">Мы в Фейсбуке</span> <img src="http://placehold.it/10x19" alt="Мы в Фейсбуке" width="10" height="19"> </a>
+            </li>
+          </ul>
+          <div class="footer__copyright">
+            <a class="footer__academy" href="https://up.htmlacademy.ru/adaptive/17/">HTML Academy</a>
+            <a class="footer__academy-logo" href="https://up.htmlacademy.ru/adaptive/17/">HTML Academy</a>
+          </div>
         </div>
       </section>
     </footer>
