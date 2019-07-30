@@ -1,5 +1,6 @@
 .main-header {
   background-color: #ffffff;
+  padding-top: 30px;
 }
 
 .main-header--index {
@@ -14,6 +15,8 @@
   .font(36px, 400, 60px);
   text-align: center;
   color: @1;
+  margin: 0;
+  margin-bottom: 20px;
 }
 
 .main-header__title--index {
@@ -26,6 +29,7 @@
   text-align: center;
   color: @1;
   text-transform: uppercase;
+  margin-bottom: 30px;
 }
 
 .main-header__text--index {
@@ -35,4 +39,81 @@
 
 .main-header__button {
   width: 100%;
+}
+
+@media (min-width: @tablet-width) {
+  .main-header {
+    padding-top: 62px;
+  }
+
+  .main-header__wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .main-header--index {
+    background: none;
+  }
+
+  .main-header__title {
+    .font(60px, 400, 60px);
+    text-align: left;
+  }
+
+  .main-header__title--index {
+    color: @1;
+    margin-bottom: 30px;
+    margin-left: 90px;
+  }
+
+  .main-header__text {
+    color: @1;
+    font-size: 20px;
+    line-height: 20px;
+    text-align: left;
+    margin-top: 0;
+    margin-bottom: 48px;
+    margin-left: 90px;
+  }
+
+  .main-header__text--form {
+    margin-left: 40px;
+  }
+
+  .main-header__image {
+    width: 709px;
+    height: 609px;
+    order: 1;
+    margin-top: -80px;
+  }
+
+  .main-header__button {
+    width: 245px;
+    margin-left: 90px;
+    z-index: 2;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .main-header {
+    padding-top: 113px;
+  }
+  .main-header__wrapper {
+    display: block;
+  }
+
+  .main-header__image {
+    width: 552px;
+    height: 449px;
+    margin: 0;
+    flex-basis: 100%;
+    float: right;
+    margin-top: -300px;
+    margin-right: 200px;
+  }
+
+  .main-header__text--form {
+    margin-left: auto;
+  }
+
 }

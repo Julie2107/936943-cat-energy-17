@@ -5,26 +5,47 @@
 .case__title {
   .font(36px, 400, 60px);
   color: @1;
+  .center-block;
 }
 
 .case__desc {
   .text-font();
+  width: 280px;
+  .center-block;
 }
 
 .case__param {
+  display: flex;
   list-style: none;
-  margin: 0;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
   padding: 0;
+  width: 280px;
+  .center-block;
+}
+
+.case__param-item {
+  border-radius: 3px;
+  border: 1px solid #cdcdcd;
+  width: 124px;
+  box-sizing: border-box;
 }
 
 .case__param-item strong {
+  display: block;
+  box-sizing: border-box;
+  text-align: center;
   .font(24px, 400, 24px);
   color: @1;
   text-transform: uppercase;
 }
 
 .case__param-item span {
+  display: block;
+  width: 87px;
   .text-font(12px, 400, 12px);
+  text-align: center;
 }
 
 .case__expences {
@@ -32,4 +53,95 @@
   text-transform: uppercase;
   color: @1;
   text-align: center;
+  margin: 0;
+}
+
+.case__slider {
+  .center-block;
+  width: 280px;
+}
+
+@media (min-width: @tablet-width) {
+  .case {
+    background-color: white;
+    border-top: 1px solid @grey;
+  }
+
+  .case__param {
+    width: 708px;
+  }
+
+  .case__title {
+    margin-top: 50px;
+    .font(60px, 400, 60px);
+  }
+
+  .case__desc {
+    width: 708px;
+    .font(16px, 400, 24px);
+  }
+
+  .case__param-item strong {
+    .font(30px, 400, 37.02px);
+  }
+
+  .case__param-item span {
+    .text-font(14px, 400, 14px);
+  }
+
+  .case__expences {
+    .font(20px, 400, 20px);
+    text-align: right;
+  }
+
+  .case__slider {
+    background-color: @grey;
+    width: 708px;
+  }
+
+  .case__param-item {
+    width: 162px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .case {
+    border: none;
+  }
+
+  .case__title {
+    margin-top: 0;
+  }
+
+  .case__content {
+    width: 1440px;
+    box-sizing: border-box;
+    background-color: @grey;
+    display: flex;
+    .center-block;
+    padding-left: 110px;
+    padding-right: 110px;
+  }
+
+  .case__info {
+    width: 570px;
+  }
+
+  .case__expences {
+    .font(20px, 400, 20px);
+    text-align: right;
+  }
+
+  .case__desc {
+    margin: 0;
+    width: auto;
+  }
+
+  .case__param {
+    width: auto;
+  }
+
+  .case__param-item {
+    width: 162px;
+  }
 }

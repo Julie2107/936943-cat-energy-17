@@ -3,23 +3,28 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Кэт энерджи</title>
-    <link rel="stylesheet" href="css/style.css">
     <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <header class="page-header">
-      <div class="page-header__wrapper container">
-        <a class="page-header__logo" href="index.html">
-          <img class="page-header__logotype" src="http://placehold.it/33x38" alt="логотип Кэтенерджи" width="33" height="38">
-          <img class="page-header__brandname" src="http://placehold.it/101x18" alt="логотип Кэтенерджи" width="101" height="18">
-        </a>
+      <div class="page-header__navigation">
+        <div class="page-header__wrapper">
+          <a class="page-header__logo" href="index.html">
+            <img class="page-header__logotype" src="http://placehold.it/33x38" alt="логотип Кэтенерджи" width="33" height="38">
+          </a>
+          <a class="page-header__logo page-header__logo--brandname" href="index.html">
+            <img src="http://placehold.it/101x18" alt="логотип Кэтенерджи" width="101" height="18">
+          </a>
+          <button class="page-header__nav-toggle" type="button" name="button"><span class="visually-hidden">Открыть меню</span></button>
+        </div>
         <nav class="page-header__nav main-nav">
-          <button class="main-nav__toggle" type="button" name="button"><span class="visually-hidden">Открыть меню</span></button>
           <ul class="main-nav__list">
             <li class="main-nav__item">
               <a href="index.html">Главная</a>
             </li>
-            <li class="main-nav__item">
+            <li class="main-nav__item main-nav__item--active">
               <a href="catalogue.html">Каталог продукции</a>
             </li>
             <li class="main-nav__item">
@@ -37,8 +42,8 @@
         <h2 class="visually-hidden">Основной ассортимент</h2>
         <ul class="range__list">
           <li class="range__item good">
-            <a href="good.html"><h3 class="good__name">Cat Energy <br>PRO 500 г</h3></a>
             <a href="good.html"><img class="good__image" src="http://placehold.it/140x144" alt="" width="140" height="144"></a>
+            <a href="good.html"><h3 class="good__name">Cat Energy <br>PRO 500 г</h3></a>
             <table class="good__desc">
               <tr>
                 <td class="good__param">Объем</td>
@@ -56,8 +61,8 @@
             <a class="site-button good__button" href="order.html">заказать</a>
           </li>
           <li class="range__item good">
-            <a href="good.html"><h3 class="good__name">Cat Energy <br>PRO 1000 г</h3></a>
             <a href="good.html"><img class="good__image" src="http://placehold.it/140x144" alt="" width="140" height="144"></a>
+            <a href="good.html"><h3 class="good__name">Cat Energy <br>PRO 1000 г</h3></a>
             <table class="good__desc">
               <tr>
                 <td class="good__param">Объем</td>
@@ -75,8 +80,8 @@
             <a class="site-button good__button" href="order.html">заказать</a>
           </li>
           <li class="range__item good">
-            <a href="good.html"><h3 class="good__name">Cat Energy <br>PRO 500 г</h3></a>
             <a href="good.html"><img class="good__image" src="http://placehold.it/140x144" alt="" width="140" height="144"></a>
+            <a href="good.html"><h3 class="good__name">Cat Energy <br>PRO 500 г</h3></a>
             <table class="good__desc">
               <tr>
                 <td class="good__param">Объем</td>
@@ -94,8 +99,8 @@
             <a class="site-button good__button" href="order.html">заказать</a>
           </li>
           <li class="range__item good">
-            <a href="good.html"><h3 class="good__name">Cat Energy <br>PRO 1000 г</h3></a>
             <a href="good.html"><img class="good__image" src="http://placehold.it/140x144" alt="" width="140" height="144"></a>
+            <a href="good.html"><h3 class="good__name">Cat Energy <br>PRO 1000 г</h3></a>
             <table class="good__desc">
               <tr>
                 <td class="good__param">Объем</td>
@@ -113,8 +118,8 @@
             <a class="site-button good__button" href="order.html">заказать</a>
           </li>
           <li class="range__item good">
-            <a href="good.html"><h3 class="good__name">Cat Energy <br>SLIM 500 г</h3></a>
             <a href="good.html"><img class="good__image" src="http://placehold.it/140x144" alt="" width="140" height="144"></a>
+            <a href="good.html"><h3 class="good__name">Cat Energy <br>SLIM 500 г</h3></a>
             <table class="good__desc">
               <tr>
                 <td class="good__param">Объем</td>
@@ -132,8 +137,8 @@
             <a class="site-button good__button" href="order.html">заказать</a>
           </li>
           <li class="range__item good">
-            <a href="good.html"><h3 class="good__name">Cat Energy <br>SLIM 1000 г</h3></a>
             <a href="good.html"><img class="good__image" src="http://placehold.it/140x144" alt="" width="140" height="144"></a>
+            <a href="good.html"><h3 class="good__name">Cat Energy <br>SLIM 1000 г</h3></a>
             <table class="good__desc">
               <tr>
                 <td class="good__param">Объем</td>
@@ -151,8 +156,8 @@
             <a class="site-button good__button" href="order.html">заказать</a>
           </li>
           <li class="range__item good">
-            <a href="good.html"><h3 class="good__name">Cat Energy <br>SLIM 500 г</h3></a>
             <a href="good.html"><img class="good__image" src="http://placehold.it/140x144" alt="" width="140" height="144"></a>
+            <a href="good.html"><h3 class="good__name">Cat Energy <br>SLIM 500 г</h3></a>
             <table class="good__desc">
               <tr>
                 <td class="good__param">Объем</td>
@@ -169,50 +174,55 @@
             </table>
             <a class="site-button good__button" href="order.html">заказать</a>
           </li>
+          <li class="range__item good good--ajax">
+            <a href="catalogue-next.html"><span class="good__image good__image--ajax">+</span></a>
+            <p class="good__name good__name--ajax">показать еще 100500 товаров</p>
+            <p class="good__desc">На самом деле вкусов гораздо больше!</p>
+            <button class="site-button good__button good__button--ajax" type="button" name="button">показать все</button>
+          </li>
         </ul>
-        <div class="good good--ajax">
-          <a href="catalogue-next.html">+</a>
-          <p class="good__name">показать еще 100500 товаров</p>
-          <p class="good__desc">На самом деле вкусов гораздо больше!</p>
-          <button class="site-button good__button good__button--ajax" type="button" name="button">показать все</button>
-        </div>
       </section>
-      <section class="add-range container">
+      <section class="add-range">
         <h2 class="add-range__title">Дополнительные товары</h2>
-        <ul class="add-range__list">
-          <li class="add-range__item good good--add">
-            <a class="good__name good__name--add" href="good.html">Сахарозаменитель</a>
-            <div class="good__desc good__desc--add">
-              <span class="add-range__volume">1 упаковка (100 г)</span>
-              <span class="add-range__price">200 Р.</span>
-            </div>
-            <a class="site-button good__button" href="order.html">заказать</a>
-          </li>
-          <li class="add-range__item good good--add">
-            <a class="good__name good__name--add" href="good.html">Питьевая вода</a>
-            <div class="good__desc good__desc--add">
-              <span class="add-range__volume">5 литров</span>
-              <span class="add-range__price">50 Р.</span>
-            </div>
-            <a class="site-button good__button" href="order.html">заказать</a>
-          </li>
-          <li class="add-range__item good good--add">
-            <a class="good__name good__name--add" href="good.html">Молоко</a>
-            <div class="good__desc good__desc--add">
-              <span class="add-range__volume">1 литр</span>
-              <span class="add-range__price">100 Р.</span>
-            </div>
-            <a class="site-button good__button" href="order.html">заказать</a>
-          </li>
-          <li class="add-range__item good good--add">
-            <a class="good__name good__name--add" href="good.html">Витамины</a>
-            <div class="good__desc good__desc--add">
-              <span class="add-range__volume">1 упаковка (30 г)</span>
-              <span class="add-range__price">300 Р.</span>
-            </div>
-            <a class="site-button good__button" href="order.html">заказать</a>
-          </li>
-        </ul>
+        <div class="add-range__wrapper container">
+          <ul class="add-range__list">
+            <li class="add-range__item good good--add">
+              <a class="good__name good__name--add" href="good.html">Сахарозаменитель</a>
+              <div class="good__desc good__desc--add">
+                <span class="add-range__volume">1 упаковка (100 г)</span>
+                <span class="add-range__price">200 Р.</span>
+              </div>
+              <a class="site-button good__button" href="order.html">заказать</a>
+            </li>
+            <li class="add-range__item good good--add">
+              <a class="good__name good__name--add" href="good.html">Питьевая вода</a>
+              <div class="good__desc good__desc--add">
+                <span class="add-range__volume">5 литров</span>
+                <span class="add-range__price">50 Р.</span>
+              </div>
+              <a class="site-button good__button" href="order.html">заказать</a>
+            </li>
+            <li class="add-range__item good good--add">
+              <a class="good__name good__name--add" href="good.html">Молоко</a>
+              <div class="good__desc good__desc--add">
+                <span class="add-range__volume">1 литр</span>
+                <span class="add-range__price">100 Р.</span>
+              </div>
+              <a class="site-button good__button" href="order.html">заказать</a>
+            </li>
+            <li class="add-range__item good good--add">
+              <a class="good__name good__name--add" href="good.html">Витамины</a>
+              <div class="good__desc good__desc--add">
+                <span class="add-range__volume">1 упаковка (30 г)</span>
+                <span class="add-range__price">300 Р.</span>
+              </div>
+              <a class="site-button good__button" href="order.html">заказать</a>
+            </li>
+          </ul>
+          <p class="add-range__promo">
+            Закажите все и получите чехол для кота в подарок!
+          </p>
+        </div>
       </section>
     </main>
     <footer class="footer">
@@ -235,7 +245,7 @@
               <a href="instagram.com"><span class="visually-hidden">Мы в Инстаграмме</span><img src="http://placehold.it/16x16" alt="Мы в Фейсбуке" width="16" height="16"></a>
             </li>
             <li class="footer__social-item">
-              <a href="facebook.com"> <span class="visually-hidden">Мы в Фейсбуке</span> <img src="http://placehold.it/10x19" alt="Мы в Фейсбуке" width="10" height="19"> </a>
+              <a href="facebook.com"> <span class="visually-hidden">Мы в Фейсбуке</span> <img src="http://placehold.it/10x19" alt="Мы в Фейсбуке" width="10" height="1"> </a>
             </li>
           </ul>
           <div class="footer__copyright">

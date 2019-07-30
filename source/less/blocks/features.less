@@ -1,3 +1,7 @@
+.features {
+  margin-bottom: 42px;
+}
+
 .features__title {
   .font(36px, 400, 60px);
   color: @1;
@@ -7,10 +11,25 @@
   list-style: none;
   margin: 0;
   padding: 0;
-  padding-left: 80px;
 }
 
 .features__item {
   .text-font();
+  padding-left: 80px;
   margin-bottom: 20px;
+}
+
+@media (min-width: @tablet-width) {
+  .features__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .features__item {
+    width: 240px;
+    padding-left: 0;
+    padding-top: 110px;
+    .font(16px, 400, 24px);
+  }
 }

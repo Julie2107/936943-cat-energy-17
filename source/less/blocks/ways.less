@@ -6,21 +6,65 @@
 
 .ways__dir {
   background-color: @grey;
+  padding: 20px;
 }
 
 .ways__title {
+  margin: 0;
   .font(24px, 400, 37.02px);
   text-transform: uppercase;
   color: @1;
+  padding-left: 92px;
+  padding-bottom: 36px;
 }
 
 .ways__desc {
+  margin: 0;
   .text-font();
+  padding-bottom: 20px;
 }
 
 .ways__link {
+  display: block;
   .font(16px, 400, 16px);
   text-transform: uppercase;
   text-decoration: none;
   color: @1;
+  border-top: 1px solid #dadada;
+  padding-top: 20px;
+}
+
+@media (min-width: @tablet-width) {
+  .ways__dir {
+    padding: 50px;
+  }
+
+  .ways__title {
+    .font(36px, 400, 37.02px);
+    padding-bottom: 30px;
+    padding-left: 0;
+  }
+
+  .ways__desc {
+    padding-right: 320px;
+    .text-font();
+    padding-bottom: 60px;
+  }
+
+  .ways__link {
+    .font(20px, 400, 20px);
+    border-top: none;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .ways__title {
+    padding-bottom: 75px;
+    padding-left: 216px;
+  }
+
+  .ways__desc {
+    padding-right: 0;
+    .font(16px, 400, 24px);
+  }
 }
