@@ -5,13 +5,10 @@
   padding: 0 25px 20px 20px;
 }
 
-.good--ajax {
-  text-align: center;
-  border: 1px solid #ededed;
-}
-
-.good--add:last-child {
-  border: 1px solid #ededed;
+.good__image {
+  float: left;
+  width: 140px;
+  height: 144px;
 }
 
 .good a {
@@ -22,17 +19,28 @@
   .font(16px, 400, 20px);
   text-transform: uppercase;
   color: @1;
+  margin-top: 25px;
+  margin-bottom: 18px;
 }
 
 .good__desc {
   .text-font(12px, 400, 16px, @4);
+  margin-bottom: 23px;
 }
 
-.good__desc--add {
-  .text-font();
-  line-height: 14px;
+.good--ajax {
+  text-align: center;
+  border: 1px solid #ededed;
+  padding-top: 27px;
 }
 
+.good__image--ajax {
+  display: block;
+  background-color: @2;
+  opacity: 0.2;
+  width: 30px;
+  height: 30px;
+}
 
 .good__button--ajax {
   .font(16px, 400, 20px);
@@ -40,4 +48,72 @@
   color: @4;
   width: 100%;
   background-color: @grey;
+}
+
+.good--add {
+  border: none;
+  border-top: 1px solid #cdcdcd;
+  border-bottom: 1px solid #cdcdcd;
+  background-color: white;
+  padding: 0;
+  padding-top: 14px;
+  padding-bottom: 17px;
+}
+
+.good__desc--add {
+  .text-font();
+  line-height: 14px;
+}
+
+@media (min-width: @tablet-width) {
+  .good {
+    width: 324px;
+    background-color: @grey;
+    padding: 0 37px 40px 37px;
+  }
+
+  .good a {
+    display: block;
+    text-align: center;
+  }
+
+  .good__image {
+    float: none;
+    display: block;
+    width: 161px;
+    height: 172px;
+  }
+
+  .good__name {
+    .font(20px, 400, 20px);
+  }
+
+  .good__desc {
+    font-size: 16px;
+  }
+
+  .good__desc td {
+    border-bottom: 1px solid #cdcdcd;
+    border-right-width: 0;
+  }
+
+  .good--ajax {
+    background-color: white;
+  }
+
+  .good--add {
+    width: auto;
+    background-color: white;
+    border: 1px solid #cdcdcd;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .good {
+    width: 245px;
+  }
+
+  .good--add {
+    width: 895px;
+  }
 }

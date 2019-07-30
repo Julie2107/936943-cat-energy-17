@@ -2,19 +2,24 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="css/style.css">
     <title>HTML Academy: Кэт энерджи</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <header class="page-header">
-      <div class="page-header__wrapper container">
-        <a class="page-header__logo" href="index.html">
-          <img class="page-header__logotype" src="http://placehold.it/33x38" alt="логотип Кэтенерджи" width="33" height="38">
-          <img class="page-header__brandname" src="http://placehold.it/101x18" alt="логотип Кэтенерджи" width="101" height="18">
-        </a>
+      <div class="page-header__navigation">
+        <div class="page-header__wrapper">
+          <a class="page-header__logo" href="index.html">
+            <img class="page-header__logotype" src="http://placehold.it/33x38" alt="логотип Кэтенерджи" width="33" height="38">
+          </a>
+          <a class="page-header__logo page-header__logo--brandname" href="index.html">
+            <img src="http://placehold.it/101x18" alt="логотип Кэтенерджи" width="101" height="18">
+          </a>
+          <button class="page-header__nav-toggle" type="button" name="button"><span class="visually-hidden">Открыть меню</span></button>
+        </div>
         <nav class="page-header__nav main-nav">
-          <button class="main-nav__toggle" type="button" name="button"><span class="visually-hidden">Открыть меню</span></button>
           <ul class="main-nav__list">
             <li class="main-nav__item">
               <a href="index.html">Главная</a>
@@ -22,7 +27,7 @@
             <li class="main-nav__item">
               <a href="catalogue.html">Каталог продукции</a>
             </li>
-            <li class="main-nav__item">
+            <li class="main-nav__item main-nav__item--active">
               <a href="form.html">Подбор программы</a>
             </li>
           </ul>
@@ -32,11 +37,11 @@
     <main>
       <section class="main-header container">
         <h1 class="main-header__title">Подбор программы</h1>
-        <p class="main-header__text">Заполните анкету и мы подберем программу питания для вашего кота</p>
+        <p class="main-header__text main-header__text--form">Заполните анкету и мы подберем программу питания для вашего кота</p>
       </section>
-      <form class="order-form container" action="https://echo.htmlacademy.ru" method="get">
+      <form class="order-form" action="https://echo.htmlacademy.ru" method="get">
         <fieldset class="order-form__fieldset">
-          <ul class="order-form__list">
+          <ul class="order-form__list ">
             <li class="order-form__item">
               <label class="order-form__label" for="name-field">имя*:</label>
               <input type="text" id="name-field" name="name" placeholder="Барсик" required="">
@@ -52,7 +57,7 @@
           </ul>
         </fieldset>
         <fieldset class="order-form__fieldset">
-          <ul class="order-form__list">
+          <ul class="order-form__list ">
             <li class="order-form__item">
               <input id="weightloss" type="radio" name="goal">
               <label class="order-form__label" for="weightloss">похудение</label>
@@ -69,7 +74,7 @@
         </fieldset>
         <fieldset class="order-form__fieldset">
           <legend class="order-form__legend">Контактные данные (владельца кота)</legend>
-          <ul class="order-form__list">
+          <ul class="order-form__list ">
             <li class="order-form__item">
               <input type="email" id="email-field" name="email" placeholder="kuklachev@gmail.com" required="">
               <label class="order-form__label" for="email-field">E-mail:*</label>
@@ -82,7 +87,7 @@
         </fieldset>
         <fieldset class="order-form__fieldset">
           <legend class="order-form__legend">Комментарий</legend>
-          <textarea name="comments" rows="8" cols="30">Расскажите обо всех повадках кота</textarea>
+          <textarea class="" name="comments" rows="8" cols="30">Расскажите обо всех повадках кота</textarea>
         </fieldset>
         <fieldset class="order-form__fieldset">
           <legend class="order-form__legend">Дополнительно</legend>
@@ -112,14 +117,14 @@
     <footer class="footer">
       <section class="footer__contacts ">
         <h2 class="visually-hidden">Наш адрес</h2>
-        <div class="footer__adress container contacts">
+        <div class="footer__adress contacts">
           <p class="contacts__invite">приглашаем к сотрудничеству дилеров!</p>
           <p class="contacts__adress">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
         </div>
         <iframe class="footer__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5978266653062!2d30.321297716096982!3d59.93881538187623!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310e354288bb%3A0xbbeecda9980bbc58!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE4LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1558004477092!5m2!1sru!2sru" style="border:0" allowfullscreen=""></iframe>
       </section>
       <section class="footer__main">
-        <div class="footer__wrapper container">
+        <div class="footer__wrapper ">
           <a class="footer__logo" href="index.html"> <img class="footer__logo-image" src="http://placehold.it/128x24" alt="логотип кэтенерджи" width="128" height="24"></a>
           <ul class="footer__social">
             <li class="footer__social-item">
@@ -129,7 +134,7 @@
               <a href="instagram.com"><span class="visually-hidden">Мы в Инстаграмме</span><img src="http://placehold.it/16x16" alt="Мы в Фейсбуке" width="16" height="16"></a>
             </li>
             <li class="footer__social-item">
-              <a href="facebook.com"> <span class="visually-hidden">Мы в Фейсбуке</span> <img src="http://placehold.it/10x19" alt="Мы в Фейсбуке" width="10" height="19"> </a>
+              <a href="facebook.com"> <span class="visually-hidden">Мы в Фейсбуке</span> <img src="http://placehold.it/10x19" alt="Мы в Фейсбуке" width="10" height="1"> </a>
             </li>
           </ul>
           <div class="footer__copyright">

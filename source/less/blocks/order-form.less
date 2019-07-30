@@ -1,11 +1,18 @@
+.order-form {
+  width: 320px;
+  .center-block();
+}
+
 .order-form__list {
   list-style: none;
-  margin: 0;
   padding: 0;
 }
 
 .order-form__fieldset {
   border: none;
+  border-top: 2px solid @green;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .order-form__legend {
@@ -28,10 +35,50 @@
 }
 
 .order-form__button {
-  width: 100%;
+  width: 280px;
+  .center-block();
 }
 
 .order-form__note {
   .text-font();
   line-height: 16px;
+}
+
+@media (min-width: @tablet-width) {
+  .order-form {
+    width: @tablet-width;
+    margin-bottom: 80px;
+  }
+
+  .order-form__fieldset {
+    padding-left: 72px;
+    padding-right: 67px;
+  }
+
+  .order-form__button {
+    width: 280px;
+    margin: 0;
+    float: left;
+    margin-left: 71px;
+  }
+
+  .order-form__note {
+    text-align: center;
+    vertical-align: middle;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .order-form {
+    width: 1440px;
+  }
+
+  .order-form__fieldset {
+    padding-left: 110px;
+    padding-right: 110px;
+  }
+
+  .order-form__button {
+    width: 568px;
+  }
 }

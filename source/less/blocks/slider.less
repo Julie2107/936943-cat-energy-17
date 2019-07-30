@@ -3,3 +3,25 @@
   text-transform: uppercase;
   color: @1;
 }
+
+.slider__thin-image {
+  display: none;
+}
+
+@media (min-width: @tablet-width) {
+  .slider {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .slider__toggles {
+    .font(20px, 400, 20px);
+  }
+
+  .slider img {
+    width: 677px;
+    height: 517px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

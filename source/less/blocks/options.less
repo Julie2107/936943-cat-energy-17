@@ -1,0 +1,36 @@
+.options {
+  margin-top: 20px;
+}
+
+.options__item {
+  margin-bottom: 20px;
+}
+
+@media (min-width: @tablet-width) {
+  .options__item {
+    margin-bottom: 30px;
+  }
+
+  .options {
+    margin-bottom: 50px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .options__list {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .options__item {
+    box-sizing: border-box;
+    padding-top: 41px;
+    padding-right: 56px;
+    padding-bottom: 62px;
+    padding-left: 52px;
+  }
+
+  .options__item:not(:last-child) {
+    margin-right: 80px;
+  }
+}

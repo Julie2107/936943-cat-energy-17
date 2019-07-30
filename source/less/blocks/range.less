@@ -1,10 +1,39 @@
 .range {
   .center-block;
   width: 320px;
+  margin-bottom: 30px;
 }
 
 .range__list {
   list-style: none;
   padding: 0;
   margin: 0;
+}
+
+@media (min-width: @tablet-width) {
+  .range {
+    width: @tablet-width;
+  }
+
+  .range__list {
+    width: 708px;
+    .center-block;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .range__item {
+    margin-top: 140px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .range {
+    width: 1440px;
+  }
+
+  .range__list {
+    width: 1220px;
+  }
 }

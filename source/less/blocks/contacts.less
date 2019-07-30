@@ -1,3 +1,7 @@
+.contacts {
+  background-color: white;
+}
+
 .contacts__invite {
   .font(16px, 400, 20px);
   color: @1;
@@ -7,4 +11,25 @@
 .contacts__adress {
   .text-font();
   line-height: 20px;
+}
+
+@media (min-width: @tablet-width) {
+  .contacts__invite {
+    .font(20px, 400, 25px);
+  }
+
+  .contacts__adress {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .contacts {
+    padding: 60px;
+  }
+
+  .contacts p {
+    display: block;
+    width: 155px;
+  }
 }
