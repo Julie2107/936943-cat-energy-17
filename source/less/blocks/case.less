@@ -29,7 +29,9 @@
   border-radius: 3px;
   border: 1px solid #cdcdcd;
   width: 124px;
+  height: 56px;
   box-sizing: border-box;
+  padding-top: 15px;
 }
 
 .case__param-item strong {
@@ -39,13 +41,20 @@
   .font(24px, 400, 24px);
   color: @1;
   text-transform: uppercase;
+  margin-bottom: 7px;
 }
 
 .case__param-item span {
   display: block;
+  box-sizing: border-box;
+  text-align: center;
   width: 87px;
   .text-font(12px, 400, 12px);
-  text-align: center;
+  padding-left: 16px;
+  padding-right: 16px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: @grey;
 }
 
 .case__expences {
@@ -81,12 +90,22 @@
     .font(16px, 400, 24px);
   }
 
+  .case__param-item {
+    width: 162px;
+    height: 72px;
+  }
+
   .case__param-item strong {
     .font(30px, 400, 37.02px);
+    margin-bottom: 10px;
   }
 
   .case__param-item span {
     .text-font(14px, 400, 14px);
+    width: 142px;
+    background-color: white;
+    padding-left: 7px;
+    padding-right: 7px;
   }
 
   .case__expences {
@@ -97,10 +116,6 @@
   .case__slider {
     background-color: @grey;
     width: 708px;
-  }
-
-  .case__param-item {
-    width: 162px;
   }
 }
 
@@ -143,5 +158,9 @@
 
   .case__param-item {
     width: 162px;
+  }
+
+  .case__param-item span {
+    background-color: @grey;
   }
 }
