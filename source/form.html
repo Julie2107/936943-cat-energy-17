@@ -9,25 +9,20 @@
   </head>
   <body>
     <header class="page-header">
-      <div class="page-header__navigation">
-        <div class="page-header__wrapper">
-          <a class="page-header__logo" href="index.html">
-            <img class="page-header__logotype" src="http://placehold.it/33x38" alt="логотип Кэтенерджи" width="33" height="38">
-          </a>
-          <a class="page-header__logo page-header__logo--brandname" href="index.html">
-            <img src="http://placehold.it/101x18" alt="логотип Кэтенерджи" width="101" height="18">
-          </a>
-          <button class="page-header__nav-toggle" type="button" name="button"><span class="visually-hidden">Открыть меню</span></button>
-        </div>
-        <nav class="page-header__nav main-nav">
+      <div class="page-header__wrapper">
+        <a class="page-header__logo" href="index.html">
+          <img class="page-header__logotype" src="../img/logo-mobile.svg" alt="логотип Кэтенерджи" width="191" height="38">
+        </a>
+        <nav class="main-nav main-nav--opened main-nav--nojs">
+          <button class="main-nav__toggle" type="button" name="button"><span class="visually-hidden">Открыть меню</span></button>
           <ul class="main-nav__list">
-            <li class="main-nav__item">
+            <li class="main-nav__item main-nav__item--active">
               <a href="index.html">Главная</a>
             </li>
             <li class="main-nav__item">
               <a href="catalogue.html">Каталог продукции</a>
             </li>
-            <li class="main-nav__item main-nav__item--active">
+            <li class="main-nav__item">
               <a href="form.html">Подбор программы</a>
             </li>
           </ul>
@@ -37,76 +32,78 @@
     <main>
       <section class="main-header container">
         <h1 class="main-header__title">Подбор программы</h1>
-        <p class="main-header__text main-header__text--form">Заполните анкету и мы подберем программу питания для вашего кота</p>
+        <p class="main-header__text main-header__text--form">Заполните анкету и мы подберем <br> программу питания для вашего кота</p>
       </section>
       <form class="order-form" action="https://echo.htmlacademy.ru" method="get">
-        <fieldset class="order-form__fieldset">
-          <ul class="order-form__list ">
-            <li class="order-form__item">
-              <label class="order-form__label" for="name-field">имя*:</label>
-              <input type="text" id="name-field" name="name" placeholder="Барсик" required="">
-            </li>
-            <li class="order-form__item initials__item">
-              <label class="order-form__label" for="weight-field">Вес (кг):*</label>
-              <input type="number" id="weight-field" name="weight" placeholder="7" required="">
-            </li>
-            <li class="order-form__item initials__item">
-              <label class="order-form__label" for="age-field">Возраст (лет):</label>
-              <input type="number" id="age-field" name="age" placeholder="7">
-            </li>
-          </ul>
-        </fieldset>
-        <fieldset class="order-form__fieldset">
-          <ul class="order-form__list ">
-            <li class="order-form__item">
-              <input id="weightloss" type="radio" name="goal">
-              <label class="order-form__label" for="weightloss">похудение</label>
-            </li>
-            <li class="order-form__item">
-              <input id="weightgain" type="radio" name="goal">
-              <label class="order-form__label" for="weightgain">набор массы</label>
-            </li>
-            <li class="order-form__item">
-              <input id="advise" type="radio" name="goal">
-              <label class="order-form__label" for="advise">Не знаю (Нужен ваш совет)</label>
-            </li>
-          </ul>
-        </fieldset>
-        <fieldset class="order-form__fieldset">
-          <legend class="order-form__legend">Контактные данные (владельца кота)</legend>
-          <ul class="order-form__list ">
-            <li class="order-form__item">
+        <div class="order-form__wrapper">
+          <fieldset class="order-form__fieldset fieldset fieldset--name">
+            <ul class="fieldset__list fieldset__list--name">
+              <li class="fieldset__item">
+                <label class="fieldset__label" for="name-field">имя*:</label>
+                <input type="text" id="name-field" name="name" placeholder="Барсик" required="">
+              </li>
+              <li class="fieldset__item">
+                <label class="fieldset__label" for="weight-field">Вес (кг):*</label>
+                <input type="number" id="weight-field" name="weight" placeholder="7" required="">
+              </li>
+              <li class="fieldset__item">
+                <label class="fieldset__label" for="age-field">Возраст (лет):</label>
+                <input type="number" id="age-field" name="age" placeholder="7">
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset class="order-form__fieldset fieldset fieldset--goal">
+            <ul class="fieldset__list">
+              <li class="fieldset__item fieldset__item--radio">
+                <input id="weightloss" type="radio" name="goal" checked>
+                <label class="fieldset__label fieldset__label--radio" for="weightloss">похудение</label>
+              </li>
+              <li class="fieldset__item fieldset__item--radio">
+                <input id="weightgain" type="radio" name="goal">
+                <label class="fieldset__label fieldset__label--radio" for="weightgain">набор массы</label>
+              </li>
+              <li class="fieldset__item fieldset__item--radio">
+                <input id="advise" type="radio" name="goal">
+                <label class="fieldset__label fieldset__label--radio" for="advise">Не знаю (Нужен ваш совет)</label>
+              </li>
+            </ul>
+          </fieldset>
+        </div>
+        <fieldset class="order-form__fieldset fieldset fieldset--contacts">
+          <legend class="fieldset__legend">Контактные данные (владельца кота)</legend>
+          <ul class="fieldset__list fieldset__list--contacts">
+            <li class="fieldset__item fieldset__item--contacts">
+              <label class="fieldset__label" for="email-field">E-mail:*</label>
               <input type="email" id="email-field" name="email" placeholder="kuklachev@gmail.com" required="">
-              <label class="order-form__label" for="email-field">E-mail:*</label>
             </li>
-            <li class="order-form__item">
+            <li class="fieldset__item fieldset__item--contacts">
+              <label class="fieldset__label" for="tel-field">Телефон:*</label>
               <input type="tel" id="tel-field" name="mobile" placeholder="8 (960) 900-60-90" required="">
-              <label class="order-form__label" for="tel-field">Вес (кг):*</label>
             </li>
           </ul>
         </fieldset>
-        <fieldset class="order-form__fieldset">
-          <legend class="order-form__legend">Комментарий</legend>
-          <textarea class="" name="comments" rows="8" cols="30">Расскажите обо всех повадках кота</textarea>
+        <fieldset class="order-form__fieldset fieldset">
+          <legend class="fieldset__legend">Комментарий</legend>
+          <textarea class="fieldset__textarea" name="comments" rows="8" cols="30">Расскажите обо всех повадках кота</textarea>
         </fieldset>
-        <fieldset class="order-form__fieldset">
-          <legend class="order-form__legend">Дополнительно</legend>
-          <ul class="order-form__list">
-            <li class="order-form__item">
+        <fieldset class="order-form__fieldset fieldset">
+          <legend class="fieldset__legend">Дополнительно</legend>
+          <ul class="fieldset__list fieldset__list--checkbox">
+            <li class="fieldset__item fieldset__item--checkbox">
               <input id="sweetener" type="checkbox" name="sweetener" checked>
-              <label class="order-form__label" for="sweetener">Сахарозаменитель</label>
+              <label class="fieldset__label fieldset__label--checkbox" for="sweetener">Сахарозаменитель</label>
             </li>
-            <li class="order-form__item">
+            <li class="fieldset__item fieldset__item--checkbox">
               <input id="water" type="checkbox" name="water">
-              <label class="order-form__label" for="water">Питьевая вода</label>
+              <label class="fieldset__label fieldset__label--checkbox" for="water">Питьевая вода</label>
             </li>
-            <li class="order-form__item">
+            <li class="fieldset__item fieldset__item--checkbox">
               <input id="milk" type="checkbox" name="milk">
-              <label class="order-form__label" for="milk">Молоко</label>
+              <label class="fieldset__label fieldset__label--checkbox" for="milk">Молоко</label>
             </li>
-            <li class="order-form__item">
+            <li class="fieldset__item fieldset__item--checkbox">
               <input id="vitamins" type="checkbox" name="vitamins">
-              <label class="order-form__label" for="vitamins">Витамины</label>
+              <label class="fieldset__label fieldset__label--checkbox" for="vitamins">Витамины</label>
             </li>
           </ul>
         </fieldset>
@@ -117,14 +114,14 @@
     <footer class="footer">
       <section class="footer__contacts ">
         <h2 class="visually-hidden">Наш адрес</h2>
-        <div class="footer__adress contacts">
+        <div class="footer__adress container contacts">
           <p class="contacts__invite">приглашаем к сотрудничеству дилеров!</p>
           <p class="contacts__adress">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
         </div>
         <iframe class="footer__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5978266653062!2d30.321297716096982!3d59.93881538187623!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310e354288bb%3A0xbbeecda9980bbc58!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE4LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1558004477092!5m2!1sru!2sru" style="border:0" allowfullscreen=""></iframe>
       </section>
       <section class="footer__main">
-        <div class="footer__wrapper ">
+        <div class="footer__wrapper container">
           <a class="footer__logo" href="index.html"> <img class="footer__logo-image" src="http://placehold.it/128x24" alt="логотип кэтенерджи" width="128" height="24"></a>
           <ul class="footer__social">
             <li class="footer__social-item">
@@ -144,5 +141,21 @@
         </div>
       </section>
     </footer>
+    <script>
+      var navMain = document.querySelector('.main-nav');
+      var navToggle = document.querySelector('.main-nav__toggle');
+
+      navMain.classList.remove('main-nav--nojs');
+
+      navToggle.addEventListener('click', function() {
+        if (navMain.classList.contains('main-nav--closed')) {
+          navMain.classList.remove('main-nav--closed');
+          navMain.classList.add('main-nav--opened');
+        } else {
+          navMain.classList.add('main-nav--closed');
+          navMain.classList.remove('main-nav--opened');
+        }
+      });
+    </script>
   </body>
 </html>
