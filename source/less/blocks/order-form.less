@@ -3,37 +3,6 @@
   .center-block();
 }
 
-.order-form__list {
-  list-style: none;
-  padding: 0;
-}
-
-.order-form__fieldset {
-  border: none;
-  border-top: 2px solid @green;
-  padding-left: 20px;
-  padding-right: 20px;
-}
-
-.order-form__legend {
-  .font(24px, 400, 24px);
-  color: @1;
-}
-
-.order-form__label {
-  .font(16px, 400, 18px);
-  color: @1;
-  text-transform: uppercase;
-}
-
-.order-form__item input[placeholder],
-.order-form__fieldset textarea {
-  font-family: "Oswald", "Arial", sans-serif;
-  .font(16px, 400, 18px);
-  color: @4;
-  text-transform: uppercase;
-}
-
 .order-form__button {
   width: 280px;
   .center-block();
@@ -48,11 +17,6 @@
   .order-form {
     width: @tablet-width;
     margin-bottom: 80px;
-  }
-
-  .order-form__fieldset {
-    padding-left: 72px;
-    padding-right: 67px;
   }
 
   .order-form__button {
@@ -73,12 +37,16 @@
     width: 1440px;
   }
 
-  .order-form__fieldset {
-    padding-left: 110px;
-    padding-right: 110px;
-  }
-
   .order-form__button {
     width: 568px;
+    margin-left: 110px;
+  }
+
+  .order-form__wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 1220px;
+    .center-block;
+    margin-bottom: 73px;
   }
 }
