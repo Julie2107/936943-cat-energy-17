@@ -2,7 +2,7 @@
   border: 1px solid #ededed;
   border-bottom: none;
   box-sizing: border-box;
-  padding: 0 25px 20px 20px;
+  padding: 0 20px 20px 20px;
 }
 
 .good__image {
@@ -24,8 +24,13 @@
 }
 
 .good__desc {
+  width: 137px;
   .text-font(12px, 400, 16px, @4);
   margin-bottom: 23px;
+}
+
+.good__num {
+  text-align: right;
 }
 
 .good--ajax {
@@ -34,8 +39,13 @@
   padding-top: 27px;
 }
 
-.good__image--ajax {
+.good--ajax a {
   display: block;
+}
+
+.good__image--ajax {
+  text-align: center;
+  float: none;
   background-color: @2;
   opacity: 0.2;
   width: 30px;
@@ -51,6 +61,8 @@
 }
 
 .good--add {
+  display: flex;
+  flex-direction: column;
   border: none;
   border-top: 1px solid #cdcdcd;
   border-bottom: 1px solid #cdcdcd;
@@ -60,9 +72,18 @@
   padding-bottom: 17px;
 }
 
+.good__name--add {
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
 .good__desc--add {
   .text-font();
   line-height: 14px;
+  align-self: stretch;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 11px;
 }
 
 @media (min-width: @tablet-width) {
@@ -79,7 +100,6 @@
 
   .good__image {
     float: none;
-    display: block;
     width: 161px;
     height: 172px;
   }
@@ -89,12 +109,15 @@
   }
 
   .good__desc {
+    width: 100%;
     font-size: 16px;
   }
 
   .good__desc td {
     border-bottom: 1px solid #cdcdcd;
     border-right-width: 0;
+    padding-bottom: 6px;
+    padding-top: 6px;
   }
 
   .good--ajax {
@@ -102,9 +125,23 @@
   }
 
   .good--add {
+    padding-top: 30px;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
     width: auto;
     background-color: white;
     border: 1px solid #cdcdcd;
+  }
+
+  .good__button--add {
+    width: 633px;
+    font-size: 16px;
+    padding: 10px;
+  }
+
+  .good__desc--add {
+    width: 225px;
   }
 }
 
@@ -114,6 +151,31 @@
   }
 
   .good--add {
+    align-items: center;
     width: 895px;
+    border: none;
+    border-top: 1px solid @grey;
+    padding: 0;
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+
+  .good--add:last-child {
+    border-bottom:  1px solid @grey;
+  }
+
+  .good__button--add {
+    width: 245px;
+  }
+
+  .good--add .good__name--add {
+    margin-bottom: 0;
+    width: 325px;
+    text-align: left;
+  }
+
+  .good__desc--add {
+    align-items: center;
+    margin-bottom: 0;
   }
 }
