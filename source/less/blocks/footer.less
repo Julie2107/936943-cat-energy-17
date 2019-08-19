@@ -17,6 +17,10 @@
   width: 320px;
   height: 362px;
   .center-block;
+
+  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/bg-map-mobile@2x.png");
+    }
 }
 
 .footer__main {
@@ -64,6 +68,10 @@
   .footer__map {
     width: @tablet-width;
     background-image: url("../img/bg-map-tablet@1x.png");
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+        background-image: url("../img/bg-map-tablet@2x.png");
+      }
   }
 
   .footer__wrapper {
@@ -107,5 +115,9 @@
   .footer__map {
     width: 1440px;
     background-image: url("../img/bg-map-desktop@1x.png");
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+        background-image: url("../img/bg-map-desktop@2x.png");
+      }
   }
 }

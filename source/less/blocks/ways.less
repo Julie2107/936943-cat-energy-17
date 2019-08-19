@@ -5,8 +5,33 @@
 }
 
 .ways__dir {
+  position: relative;
   background-color: @grey;
   padding: 20px;
+}
+
+.ways__icon-box {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: @green;
+  border: 4px solid transparent;
+  box-sizing: border-box;
+  top: 20px;
+  left: 20px;
+}
+
+.ways__icon {
+  position: absolute;
+  top: -5px;
+  left: 5px;
+}
+
+.ways__icon--pro {
+  max-width: none;
+  top: 11px;
+  left: -10px;
 }
 
 .ways__title {
@@ -25,6 +50,7 @@
 }
 
 .ways__link {
+  position: relative;
   display: block;
   .font(16px, 400, 16px);
   text-transform: uppercase;
@@ -34,15 +60,59 @@
   padding-top: 20px;
 }
 
+.ways__link:active {
+  opacity: 0.3;
+}
+
+.ways__link::after {
+  position: absolute;
+  content: "";
+  width: 24px;
+  height: 11px;
+  background-color: transparent;
+  background-image: url("../img/icon-right-arrow-long.svg");
+  background-repeat: no-repeat;
+  left: 97px;
+  top: 22px;
+}
+
+.ways__link:hover::after {
+  width: 33px;
+  background-image: url("../img/icon-right-arrow-verylong.svg");
+}
+
 @media (min-width: @tablet-width) {
   .ways__dir {
     padding: 50px;
+    padding-top: 80px;
   }
 
   .ways__title {
     .font(36px, 400, 37.02px);
     padding-bottom: 30px;
     padding-left: 0;
+  }
+
+  .ways__icon-box {
+    width: 200px;
+    height: 200px;
+    top: 91px;
+    left: 450px;
+  }
+
+  .ways__icon {
+    max-width: none;
+    width: 140px;
+    height: 194px;
+    top: -12px;
+    left: 20px;
+  }
+
+  .ways__icon--pro {
+    width: 268px;
+    height: 112px;
+    top: 44px;
+    left: -38px;
   }
 
   .ways__desc {
@@ -55,12 +125,39 @@
     .font(20px, 400, 20px);
     border-top: none;
   }
+
+  .ways__link::after {
+    left: 126px;
+    top: 25px;
+  }
 }
 
 @media (min-width: @desktop-width) {
   .ways__title {
     padding-bottom: 75px;
     padding-left: 216px;
+  }
+
+  .ways__icon-box {
+    width: 100px;
+    height: 100px;
+    top: 47px;
+    left: 52px;
+  }
+
+  .ways__icon {
+    max-width: none;
+    width: 70px;
+    height: 97px;
+    top: -6px;
+    left: 14px;
+  }
+
+  .ways__icon--pro {
+    width: 134px;
+    height: 56px;
+    top: 22px;
+    left: -18px;
   }
 
   .ways__desc {
