@@ -5,6 +5,8 @@
 .features__title {
   .font(36px, 400, 60px);
   color: @1;
+  margin-top: 0;
+  margin-bottom: 60px;
 }
 
 .features__list {
@@ -14,9 +16,58 @@
 }
 
 .features__item {
+  position: relative;
   .text-font();
   padding-left: 80px;
   margin-bottom: 20px;
+}
+
+.features__item::before {
+  position: absolute;
+  content: "";
+  width: 60px;
+  height: 60px;
+  background-color: @green;
+  background-repeat: no-repeat;
+  background-position: center;
+  left: 0;
+  top: 0;
+}
+
+.features__item--leaf::before {
+  background-image: url("../img/advantage-leaf@1x.png");
+
+  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+    background-image: url("../img/advantage-leaf@2x.png");
+    background-size: 50px 50px;
+  }
+}
+
+.features__item--powder::before {
+  background-image: url("../img/advantage-powder@1x.png");
+
+  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+    background-image: url("../img/advantage-powder@2x.png");
+    background-size: 50px 50px;
+  }
+}
+
+.features__item--dining::before {
+  background-image: url("../img/advantage-dining@1x.png");
+
+  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+    background-image: url("../img/advantage-dining@2x.png");
+    background-size: 50px 50px;
+  }
+}
+
+.features__item--time::before {
+  background-image: url("../img/advantage-clock@1x.png");
+
+  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+    background-image: url("../img/advantage-clock@2x.png");
+    background-size: 50px 50px;
+  }
 }
 
 @media (min-width: @tablet-width) {
@@ -31,5 +82,47 @@
     padding-left: 0;
     padding-top: 110px;
     .font(16px, 400, 24px);
+    margin-bottom: 120px;
+    margin-right: 80px;
+  }
+
+  .features__item::before {
+    width: 80px;
+    height: 80px;
+    left: 0;
+    top: 0;
+  }
+
+  .features__item::after {
+    position: absolute;
+    content: "";
+    color: #f2f2f2;
+    font-family: "Oswald", "Arial", sans-serif;
+    .font(281px, 400, 281px);
+    top: -40px;
+    right: 0;
+    z-index: -1;
+  }
+
+  .features__item--leaf::after {
+    content: "1";
+  }
+
+  .features__item--powder::after {
+    content: "2";
+  }
+
+  .features__item--dining::after {
+    content: "3";
+  }
+
+  .features__item--time::after {
+    content: "4";
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .features__item {
+    margin-right: 0;
   }
 }

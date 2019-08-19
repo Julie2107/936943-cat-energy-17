@@ -100,12 +100,21 @@
 
   .good__image {
     float: none;
-    width: 161px;
-    height: 172px;
+    width: 100%;
+    height: auto;
+    margin-top: -82px;
+  }
+
+  .good:nth-child(odd) .good__image {
+    margin-top: -46px;
   }
 
   .good__name {
     .font(20px, 400, 20px);
+  }
+
+  .good__name--ajax {
+    margin-bottom: 25px;
   }
 
   .good__desc {
@@ -122,6 +131,7 @@
 
   .good--ajax {
     background-color: white;
+    padding-top: 55px;
   }
 
   .good--add {
@@ -138,6 +148,11 @@
     width: 633px;
     font-size: 16px;
     padding: 10px;
+  }
+
+  .good__desc--ajax {
+    margin-top: 0;
+    margin-bottom: 85px;
   }
 
   .good__desc--add {

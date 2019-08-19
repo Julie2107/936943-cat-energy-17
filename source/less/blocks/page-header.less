@@ -5,7 +5,24 @@
 
 .page-header__logo {
   margin-left: 20px;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
 }
+
+.page-header__logo:hover .page-header__logotype {
+  opacity: 0.8;
+}
+
+.page-header__logo:active .page-header__logotype {
+  opacity: 0.8;
+}
+
 
 @media (min-width: @tablet-width) {
   .page-header {
@@ -30,15 +47,18 @@
 
 @media (min-width: @desktop-width) {
   .page-header--index {
-    max-width: 1440px;
     min-height: 700px;
     .center-block();
     margin-top: 0;
     background-color: transparent;
-    background-size: 720px 696px;
-    background-image: url("../img/index-background-desktop@1x.jpg");
+    background-image: url("../img/index-background-desktop@1x.jpg"), linear-gradient(to right, white 50%, #65a93c 50%);
     background-repeat: no-repeat;
     background-position: right top;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/index-background-desktop@2x.jpg"), linear-gradient(to right, white 50%, #65a93c 50%);
+      background-size: 720px 696px, 100% 700px;
+    }
   }
 
   .page-header__wrapper {
