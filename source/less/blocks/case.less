@@ -1,54 +1,69 @@
 .case {
   background-color: @grey;
+  padding-top: 25px;
+  padding-bottom: 35px;
 }
 
 .case__title {
   .font(36px, 400, 60px);
   color: @1;
   .center-block;
+  margin-bottom: 25px;
 }
 
 .case__desc {
   .text-font();
   width: 280px;
   .center-block;
+  margin-bottom: 25px;
 }
 
 .case__param {
   display: flex;
   list-style: none;
   justify-content: space-between;
-  align-items: center;
+  align-content: space-between;
   flex-wrap: wrap;
+  min-height: 110px;
   padding: 0;
   width: 280px;
   .center-block;
+  margin-bottom: 45px;
 }
 
 .case__param-item {
+  display: block;
   border-radius: 3px;
   border: 1px solid #cdcdcd;
   width: 124px;
+  height: 56px;
   box-sizing: border-box;
+  padding-top: 13px;
+  margin: 0;
+  text-align: center;
 }
 
 .case__param-item strong {
   display: block;
   box-sizing: border-box;
-  text-align: center;
   .font(24px, 400, 24px);
   color: @1;
   text-transform: uppercase;
+  margin-bottom: 7px;
 }
 
 .case__param-item span {
   display: block;
-  width: 87px;
+  width: 57px;
   .text-font(12px, 400, 12px);
-  text-align: center;
+  .center-block();
+  background-color: @grey;
+  padding-left: 16px;
+  padding-right: 16px;
 }
 
 .case__expences {
+  width: 100%;
   .font(14px, 400, 20px);
   text-transform: uppercase;
   color: @1;
@@ -65,10 +80,13 @@
   .case {
     background-color: white;
     border-top: 1px solid @grey;
+    padding-bottom: 0;
   }
 
   .case__param {
     width: 708px;
+    align-items: center;
+    padding-bottom: 170px;
   }
 
   .case__title {
@@ -81,26 +99,36 @@
     .font(16px, 400, 24px);
   }
 
+  .case__param-item {
+    width: 162px;
+    height: 72px;
+  }
+
   .case__param-item strong {
     .font(30px, 400, 37.02px);
+    margin-bottom: 12px;
   }
 
   .case__param-item span {
+    display: inline-block;
     .text-font(14px, 400, 14px);
+    background-color: white;
+    width: auto;
+    padding-right: 8px;
+    padding-left: 8px;
+    text-align: center;
   }
 
   .case__expences {
     .font(20px, 400, 20px);
     text-align: right;
+    width: 180px;
   }
 
   .case__slider {
     background-color: @grey;
     width: 708px;
-  }
-
-  .case__param-item {
-    width: 162px;
+    padding-bottom: 75px;
   }
 }
 
@@ -111,6 +139,7 @@
 
   .case__title {
     margin-top: 0;
+    margin-bottom: 65px;
   }
 
   .case__content {
@@ -119,29 +148,45 @@
     background-color: @grey;
     display: flex;
     .center-block;
+    padding-top: 76px;
     padding-left: 110px;
     padding-right: 110px;
   }
 
   .case__info {
-    width: 570px;
+    width: 430px;
   }
 
   .case__expences {
     .font(20px, 400, 20px);
     text-align: right;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 62px;
+  }
+
+  .case__expences span {
+    padding-right: 64px;
   }
 
   .case__desc {
     margin: 0;
     width: auto;
+    margin-bottom: 70px;
   }
 
   .case__param {
     width: auto;
+    justify-content: flex-start;
   }
 
   .case__param-item {
     width: 162px;
+    margin-right: 42px;
+  }
+
+  .case__param-item span {
+    background-color: @grey;
   }
 }

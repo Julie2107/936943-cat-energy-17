@@ -33,11 +33,20 @@
   display: block;
   text-align: center;
   margin-bottom: 31px;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
 }
 
 .footer__social {
   display: flex;
   justify-content: center;
+  align-items: center;
   list-style: none;
   margin: auto;
   padding: 0;
@@ -51,14 +60,38 @@
   margin-right: 40px;
 }
 
+.footer__social-item svg {
+  fill: #666666;
+}
+
+.footer__social-item:hover svg {
+  fill: @green;
+}
+
+.footer__social-item:active svg {
+  opacity: 0.3;
+}
+
 .footer__academy {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   .text-font(16px, 400, 16px, @4);
   text-decoration: none;
+
+  &:hover svg {
+    fill: @green;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .footer__copyright {
   margin-top: 22px;
 }
+
 
 @media (min-width: @tablet-width) {
   .footer {
