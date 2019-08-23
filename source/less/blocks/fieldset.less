@@ -35,6 +35,10 @@
   text-align: left;
 }
 
+.fieldset__legend--contacts {
+  width: 213px;
+}
+
 .fieldset__label {
   .font(16px, 400, 18px);
   color: @1;
@@ -66,21 +70,34 @@
 .fieldset__item input[type="text"],
 .fieldset__item input[type="number"],
 .fieldset__item input[type="tel"],
-.fieldset__item input[type="email"] {
-  border: 1px solid #cdcdcd;
-  opacity: 0.5; /*цвет рамки, перевести в rgba*/
+.fieldset__item input[type="email"],
+.fieldset__item input[required] {
+  border: 1px solid rgba(205, 205, 205, 0.5);
   width: 100%;
   box-sizing: border-box;
   padding: 15px;
   margin-left: 15px;
+  outline: none;
 
-  &:active {
+  &:hover {
+    border: 1px solid rgba(205, 205, 205, 1);
+  }
+
+  &:focus {
     border: 2px solid #444444;
     opacity: 1;
   }
 
-  &:required {
+  &:focus ~ .fieldset__icon {
+    fill: @green;
+  }
+
+  &:invalid {
     border: 2px solid #ff8282;
+  }
+
+  &:invalid ~ .fieldset__icon {
+    fill: #ff8282;
   }
 }
 
@@ -93,12 +110,20 @@
 .fieldset__item--checkbox input,
 .fieldset__item--radio input {
   display: none;
+
+  &:disabled ~ .fieldset__label {
+    opacity: 0.3;
+  }
 }
 
 .fieldset__label--radio,
 .fieldset__label--checkbox {
   position: relative;
   padding-left: 46px;
+
+  &:hover::before {
+    border: 1px solid #bababa;
+  }
 }
 
 .fieldset__label--radio::before,
@@ -148,6 +173,21 @@
   color: @4;
   padding: 15px;
   border: 1px solid #cdcdcd;
+}
+
+.fieldset__item--contacts {
+  position: relative;
+}
+
+.fieldset__icon {
+  position: absolute;
+  right: 17px;
+  top: 20px;
+}
+
+.fieldset__icon#icon_phone {
+  right: 13px;
+  top: 18px;
 }
 
 @media (min-width: @tablet-width) {
