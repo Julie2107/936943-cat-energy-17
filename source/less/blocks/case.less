@@ -1,14 +1,14 @@
 .case {
   background-color: @grey;
-  padding-top: 25px;
-  padding-bottom: 35px;
+  padding-top: 18px;
+  /*padding-bottom: 36px;*/
 }
 
 .case__title {
   .font(36px, 400, 60px);
   color: @1;
   .center-block;
-  margin-bottom: 25px;
+  margin-bottom: 23px;
 }
 
 .case__desc {
@@ -28,7 +28,7 @@
   padding: 0;
   width: 280px;
   .center-block;
-  margin-bottom: 45px;
+  margin-bottom: 34px;
 }
 
 .case__param-item {
@@ -49,7 +49,7 @@
   .font(24px, 400, 24px);
   color: @1;
   text-transform: uppercase;
-  margin-bottom: 7px;
+  margin-bottom: 9px;
 }
 
 .case__param-item span {
@@ -73,7 +73,7 @@
 
 .case__slider {
   .center-block;
-  width: 280px;
+  width: 320px;
 }
 
 @media (min-width: @tablet-width) {
@@ -86,27 +86,32 @@
   .case__param {
     width: 708px;
     align-items: center;
-    padding-bottom: 170px;
+    padding-bottom: 183px;
   }
 
   .case__title {
-    margin-top: 50px;
+    margin-top: 25px;
+    margin-bottom: 65px;
     .font(60px, 400, 60px);
   }
 
   .case__desc {
+    box-sizing: border-box;
     width: 708px;
     .font(16px, 400, 24px);
+    padding-right: 20px;
+    margin-bottom: 52px;
   }
 
   .case__param-item {
     width: 162px;
     height: 72px;
+    margin-right: 25px;
   }
 
   .case__param-item strong {
     .font(30px, 400, 37.02px);
-    margin-bottom: 12px;
+    margin-bottom: 10px;
   }
 
   .case__param-item span {
@@ -122,48 +127,58 @@
   .case__expences {
     .font(20px, 400, 20px);
     text-align: right;
-    width: 180px;
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 8px;
+  }
+
+  .case__expences span {
+    margin-top: 10px;
   }
 
   .case__slider {
-    background-color: @grey;
-    width: 708px;
-    padding-bottom: 75px;
+    width: 768px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .case {
     border: none;
+    padding-top: 83px;
   }
 
   .case__title {
     margin-top: 0;
-    margin-bottom: 65px;
+    margin-bottom: 75px;
+    padding-top: 0;
   }
 
   .case__content {
     width: 1440px;
     box-sizing: border-box;
-    background-color: @grey;
     display: flex;
+    justify-content: space-between;
     .center-block;
-    padding-top: 76px;
-    padding-left: 110px;
-    padding-right: 110px;
+    padding: 0;
   }
 
   .case__info {
-    width: 430px;
+    width: 50%;
+    box-sizing: border-box;
+    background-color: @grey;
+    padding-top: 70px;
+    padding-left: 110px;
   }
 
   .case__expences {
     .font(20px, 400, 20px);
     text-align: right;
-    width: 100%;
-    display: flex;
+    width: auto;
     justify-content: flex-start;
-    margin-top: 62px;
+    flex-direction: row;
+    margin-top: 50px;
   }
 
   .case__expences span {
@@ -173,12 +188,15 @@
   .case__desc {
     margin: 0;
     width: auto;
-    margin-bottom: 70px;
+    padding-right: 175px;
+    margin-bottom: 68px;
   }
 
   .case__param {
     width: auto;
     justify-content: flex-start;
+    padding-bottom: 0;
+    margin-bottom: 67px;
   }
 
   .case__param-item {
@@ -188,5 +206,10 @@
 
   .case__param-item span {
     background-color: @grey;
+  }
+
+  .case__slider {
+    width: 50%;
+    margin: 0;
   }
 }

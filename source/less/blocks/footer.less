@@ -3,10 +3,18 @@
   width: 320px;
 }
 
+.footer__contacts {
+  margin-bottom: -5px;
+}
+
 .footer__adress {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.footer__contacts--other {
+  background-color: @grey;
 }
 
 .footer__map {
@@ -25,14 +33,16 @@
 
 .footer__main {
   background-color: @grey;
-  padding-top: 39px;
-  padding-bottom: 22px;
+  padding-top: 41px;
+  padding-bottom: 30px;
 }
 
 .footer__logo {
   display: block;
   text-align: center;
-  margin-bottom: 31px;
+  padding-bottom: 29px;
+  border-bottom: 1px solid #dadada;
+
 
   &:hover {
     opacity: 0.8;
@@ -45,19 +55,18 @@
 
 .footer__social {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   list-style: none;
   margin: auto;
   padding: 0;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  border-top: 1px solid #dadada;
-  border-bottom: 1px solid #dadada;
+  padding-top: 22px;
+  padding-bottom: 18px;
+  width: 130px;
 }
 
-.footer__social-item:not(:last-child) {
-  margin-right: 40px;
+.footer__social-item {
+  margin-right: 5px;
 }
 
 .footer__social-item svg {
@@ -89,7 +98,8 @@
 }
 
 .footer__copyright {
-  margin-top: 22px;
+  padding-top: 21px;
+  border-top: 1px solid #dadada;
 }
 
 
@@ -100,6 +110,7 @@
 
   .footer__map {
     width: @tablet-width;
+    height: 396px;
     background-image: url("../img/bg-map-tablet@1x.png");
 
     @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
@@ -107,22 +118,52 @@
     }
   }
 
+  .footer__main {
+    padding-top: 62px;
+    padding-bottom: 54px;
+  }
+
   .footer__wrapper {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
   }
 
   .footer__social {
-    border: none;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin: 0;
+    margin-bottom: 3px;
+  }
+
+  .footer__social-icon--vk {
+    width: 30px;
+    height: 16px;
+  }
+
+  .footer__social-icon--insta {
+    width: 23px;
+    height: 23px;
+  }
+
+  .footer__social-icon--fb {
+    width: 14px;
+    height: 28px;
   }
 
   .footer__logo {
     margin: 0;
+    border: none;
+    padding: 0;
+    padding-right: 28px;
   }
 
   .footer__copyright {
     margin-top: 0;
+    padding: 0;
+    border: none;
+    width: 164px;
+    margin-bottom: 3px;
   }
 }
 
@@ -137,6 +178,7 @@
 
   .footer__adress {
     position: absolute;
+    background-color: white;
     width: 570px;
     height: 201px;
     z-index: 2;

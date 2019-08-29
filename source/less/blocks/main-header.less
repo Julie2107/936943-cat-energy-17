@@ -1,6 +1,5 @@
 .main-header--index {
-  background-size: 305px 320px;
-  /*background-color: @green;*/
+  background-size: 320px 305px;
   background-image: url("../img/index-background-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-position: top center;
@@ -14,31 +13,39 @@
   .font(36px, 400, 60px);
   text-align: left;
   margin: 0;
-  padding-top: 30px;
+  padding-top: 15px; /*по каталогу*/
+  margin-bottom: 28px;
 }
 
 .main-header__title--index {
   line-height: 36px;
   text-align: center;
   color: white;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
+  padding-top: 25px;
+}
+
+.main-header__title--form {
+  padding-top: 14px;
+  margin-bottom: 25px;
 }
 
 .main-header__text {
   .font(14px, 400, 18px);
   text-align: left;
   margin: 0;
+  text-transform: uppercase;
 }
 
 .main-header__text--index {
   color: white;
   line-height: 14px;
   text-align: center;
+  margin-bottom: 27px;
 }
 
 .main-header__text--form {
-  margin-top: 35px;
-  margin-bottom: 40px;
+  margin-bottom: 39px;
 }
 
 @media (min-width: @tablet-width) {
@@ -54,13 +61,19 @@
 
   .main-header__title {
     .font(60px, 400, 60px);
+    padding-top: 40px;
   }
 
   .main-header__title--index {
     color: @2;
     text-align: left;
-    margin-bottom: 30px;
-    padding-left: 90px;
+    margin-bottom: 42px;
+    padding-left: 88px;
+    padding-top: 41px;
+  }
+
+  .main-header__title--form {
+    margin-bottom: 55px;
   }
 
   .main-header__text {
@@ -69,13 +82,14 @@
 
   .main-header__text--form {
     margin-left: 40px;
+    margin-bottom: 66px;
   }
 
   .main-header__text--index {
     color: @2;
     text-align: left;
     line-height: 20px;
-    margin-bottom: 50px;
+    margin-bottom: 47px;
     padding-left: 90px;
   }
 
@@ -93,20 +107,25 @@
 
   .main-header__button {
     width: 245px;
-    margin-left: 90px;
+    margin-left: 88px;
   }
 }
 
 @media (min-width: @desktop-width) {
+  .main-header {
+    margin-bottom: 27px;
+  }
+
   .main-header__title {
-    padding-top: 80px;
+    padding-top: 58px;
   }
 
   .main-header__title--index {
     color: @2;
     text-align: left;
-    padding-top: 110px;
-    margin-bottom: 30px;
+    padding-top: 94px;
+    padding-left: 80px;
+    margin-bottom: 40px;
   }
 
   .main-header__text--form {
@@ -116,8 +135,8 @@
   .main-header__image {
     display: block;
     order: 2;
-    margin-top: -340px;
-    margin-right: 215px;
+    margin-top: -367px;
+    margin-right: 217px;
     z-index: 0;
     align-self: flex-end;
   }
@@ -125,5 +144,14 @@
   .main-header__image-photo {
     width: 552px;
     height: 500px;
+  }
+
+  .main-header__text--index {
+    margin-bottom: 53px;
+    padding-left: 80px;
+  }
+
+  .main-header__button {
+    margin-left: 80px;
   }
 }

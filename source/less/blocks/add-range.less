@@ -1,16 +1,17 @@
 .add-range {
   width: 320px;
   .center-block;
-  border-top: 2px solid @green;
+  border-top: 3px solid @green;
 }
 
 .add-range__title {
   .font(24px, 400, 24px);
   color: @1;
   width: 230px;
-  padding-left: 20px;
-  margin-bottom: 30px;
-  margin-top: -20px;
+  padding-left: 19px;
+  padding-right: 18px;
+  margin-bottom: 34px;
+  margin-top: -17px;
   background-color: white;
   text-align: left;
 }
@@ -31,10 +32,10 @@
   width: 280px;
   min-height: 289px;
   text-align: center;
-  margin-top: 40px;
-  padding: 60px;
-  padding-bottom: 45px;
-  margin-bottom: 35px;
+  margin-top: 39px;
+  padding-top: 65px;
+  padding-bottom: 42px;
+  margin-bottom: 32px;
 
   @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
     background-image: url("../img/gift-photo-mobile@2x.jpg");
@@ -42,7 +43,7 @@
 }
 
 .add-range__promo-icon {
-  margin-bottom: 65px;
+  margin-bottom: 59px;
 }
 
 .add-range__promo-text {
@@ -57,11 +58,17 @@
 @media (min-width: @tablet-width) {
   .add-range {
     width: @tablet-width;
+    margin-bottom: 75px;
   }
 
   .add-range__title {
-    margin-left: 30px;
-    padding-left: 37px;
+    width: 340px;
+    margin-left: 28px;
+    padding-left: 39px;
+    padding-right: 34px;
+    .font(36px, 400, 36px);
+    margin-top: -25px;
+    margin-bottom: 80px;
   }
 
   .add-range__promo {
@@ -69,21 +76,24 @@
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    height: 200px;
     background-image: url("../img/gift-photo-tablet@1x.jpg");
-    padding-top: 65px;
-    padding-left: 91px;
-    padding-bottom: 75px;
-    padding-right: 125px;
+    background-size: 708px 200px;
+    min-height: 200px;
+    box-sizing: border-box;
+    margin-top: 69px;
+    margin-bottom: 0;
+    padding: 46px 115px 55px 91px;
 
     @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
       background-image: url("../img/gift-photo-tablet@2x.jpg");
+      background-size: cover;
     }
   }
 
   .add-range__promo-text {
-    width: 160px;
+    width: 170px;
     text-align: left;
+    padding-top: 13px;
   }
 
   .add-range__promo-icon {
@@ -94,12 +104,13 @@
 @media (min-width: @desktop-width) {
   .add-range {
     width: 1440px;
-    padding-bottom: 80px;
+    margin-bottom: 86px;
+    /*padding-bottom: 80px;*/
   }
 
   .add-range__title {
     margin-left: 70px;
-    padding-left: 37px;
+    padding-left: 38px;
   }
 
   .add-range__promo {
