@@ -1,10 +1,14 @@
 .page-header__wrapper {
   width: 320px;
   .center-block();
+  border-bottom: 1px solid @grey;
 }
 
 .page-header__logo {
+  display: inline-block;
   margin-left: 20px;
+  margin-top: 11px;
+  margin-bottom: 14px;
 
   &:hover {
     opacity: 0.8;
@@ -26,13 +30,14 @@
 
 @media (min-width: @tablet-width) {
   .page-header {
-    margin-top: 24px;
+    margin-top: 13px;
   }
 
   .page-header__wrapper {
     width: 708px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
   }
 
   .page-header__logo {
@@ -47,9 +52,11 @@
 
 @media (min-width: @desktop-width) {
   .page-header--index {
-    min-height: 700px;
+    min-height: 696px;
     .center-block();
-    margin-top: 0;
+    padding-top: 12px;
+    margin-bottom: 80px;
+    box-sizing: border-box;
     background-color: transparent;
     background-image: url("../img/index-background-desktop@1x.jpg"), linear-gradient(to right, white 50%, #65a93c 50%);
     background-repeat: no-repeat;
@@ -64,7 +71,8 @@
   .page-header__wrapper {
     width: 1220px;
     background-color: transparent;
-    padding-top: 54px;
+    padding-top: 30px;
+    border: none;
   }
 
   .page-header__logo img {
