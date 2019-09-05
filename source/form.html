@@ -18,7 +18,7 @@
       <div class="page-header__wrapper">
         <a class="page-header__logo" href="index.html">
           <picture>
-            <source media="(min-width: 1200px)" srcset="img/logo-desktop.svg">
+            <source media="(min-width: 1300px)" srcset="img/logo-desktop.svg">
             <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
             <img class="page-header__logotype" src="img/logo-mobile.svg" alt="логотип Кэтенерджи" width="191" height="38">
           </picture>
@@ -50,15 +50,15 @@
             <ul class="fieldset__list fieldset__list--name">
               <li class="fieldset__item">
                 <label class="fieldset__label" for="name-field">имя:*</label>
-                <input type="text" id="name-field" name="name" placeholder="Барсик" value="Барсик" required="" autofocus="">
+                <input type="text" id="name-field" name="name" placeholder="Барсик" value="Барсик" required="" autofocus=""  tabindex="1">
               </li>
               <li class="fieldset__item">
                 <label class="fieldset__label" for="weight-field">Вес (кг):*</label>
-                <input type="number" id="weight-field" name="weight" placeholder="7" value="7" required="">
+                <input type="number" id="weight-field" name="weight" placeholder="7" value="7" required=""  tabindex="1">
               </li>
               <li class="fieldset__item">
                 <label class="fieldset__label" for="age-field">Возраст (лет):</label>
-                <input type="number" id="age-field" name="age" placeholder="7">
+                <input type="number" id="age-field" name="age" placeholder="7"  tabindex="1">
               </li>
             </ul>
           </fieldset>
@@ -66,32 +66,32 @@
             <ul class="fieldset__list fieldset__list--goal">
               <li class="fieldset__item fieldset__item--radio">
                 <input id="weightloss" type="radio" name="goal" checked="">
-                <label class="fieldset__label fieldset__label--radio" for="weightloss">похудение</label>
+                <label class="fieldset__label fieldset__label--radio" for="weightloss" tabindex="1">похудение</label>
               </li>
               <li class="fieldset__item fieldset__item--radio">
                 <input id="weightgain" type="radio" name="goal">
-                <label class="fieldset__label fieldset__label--radio" for="weightgain">набор массы</label>
+                <label class="fieldset__label fieldset__label--radio" for="weightgain"  tabindex="1">набор массы</label>
               </li>
               <li class="fieldset__item fieldset__item--radio">
                 <input id="advise" type="radio" name="goal">
-                <label class="fieldset__label fieldset__label--radio" for="advise">Не знаю (Нужен ваш совет)</label>
+                <label class="fieldset__label fieldset__label--radio" for="advise"  tabindex="1">Не знаю (Нужен ваш совет)</label>
               </li>
             </ul>
           </fieldset>
         </div>
         <fieldset class="order-form__fieldset fieldset fieldset--contacts">
-          <legend class="fieldset__legend fieldset__legend--contacts">Контактные данные (владельца кота)</legend>
+            <legend class="fieldset__legend fieldset__legend--contacts">Контактные данные (владельца кота)</legend>
           <ul class="fieldset__list fieldset__list--contacts">
             <li class="fieldset__item fieldset__item--contacts">
               <label class="fieldset__label" for="email-field">E-mail:*</label>
-              <input type="email" id="email-field" name="email" placeholder="kuklachev@gmail.com" value="kuklachev@gmail.com" required="">
+              <input type="email" id="email-field" name="email" placeholder="kuklachev@gmail.com" value="kuklachev@gmail.com" required=""  tabindex="1">
               <svg class="fieldset__icon" fill="#222222" width="17" height="13">
                 <use xlink:href="#icon-mail"></use>
               </svg>
             </li>
             <li class="fieldset__item fieldset__item--contacts">
               <label class="fieldset__label" for="tel-field">Телефон:*</label>
-              <input type="tel" id="tel-field" name="mobile" placeholder="8 (960) 900-60-90" value="8 (960) 900-60-90" required="">
+              <input type="tel" id="tel-field" name="mobile" placeholder="8 (960) 900-60-90" value="8 (960) 900-60-90" required=""  tabindex="1">
               <svg class="fieldset__icon fieldset__icon--phone" fill="#222222" width="20" height="20">
                 <use xlink:href="#icon-phone"></use>
               </svg>
@@ -99,32 +99,36 @@
           </ul>
         </fieldset>
         <fieldset class="order-form__fieldset fieldset fieldset--comment">
-          <legend class="fieldset__legend fieldset__legend--comment">Комментарий</legend>
-          <textarea class="fieldset__textarea" name="comments" rows="7" cols="30">Расскажите обо всех повадках кота</textarea>
+            <legend class="fieldset__legend fieldset__legend--comment">Комментарий</legend>
+          <div class="fieldset__list fieldset__list--comments">
+            <textarea class="fieldset__textarea" name="comments" rows="7" cols="30" tabindex="1">Расскажите обо всех повадках кота</textarea>
+          </div>
         </fieldset>
         <fieldset class="order-form__fieldset fieldset fieldset--checkbox">
-          <legend class="fieldset__legend fieldset__legend--checkbox">Дополнительно</legend>
+            <legend class="fieldset__legend fieldset__legend--checkbox">Дополнительно</legend>
           <ul class="fieldset__list fieldset__list--checkbox">
             <li class="fieldset__item fieldset__item--checkbox">
               <input id="sweetener" type="checkbox" name="sweetener" checked="">
-              <label class="fieldset__label fieldset__label--checkbox" for="sweetener">Сахарозаменитель</label>
+              <label class="fieldset__label fieldset__label--checkbox" for="sweetener" tabindex="1">Сахарозаменитель</label>
             </li>
             <li class="fieldset__item fieldset__item--checkbox">
               <input id="water" type="checkbox" name="water">
-              <label class="fieldset__label fieldset__label--checkbox" for="water">Питьевая вода</label>
+              <label class="fieldset__label fieldset__label--checkbox" for="water" tabindex="1">Питьевая вода</label>
             </li>
             <li class="fieldset__item fieldset__item--checkbox">
               <input id="milk" type="checkbox" name="milk">
-              <label class="fieldset__label fieldset__label--checkbox" for="milk">Молоко</label>
+              <label class="fieldset__label fieldset__label--checkbox" for="milk" tabindex="1">Молоко</label>
             </li>
             <li class="fieldset__item fieldset__item--checkbox">
               <input id="vitamins" type="checkbox" name="vitamins">
-              <label class="fieldset__label fieldset__label--checkbox" for="vitamins">Витамины</label>
+              <label class="fieldset__label fieldset__label--checkbox" for="vitamins" tabindex="1">Витамины</label>
             </li>
           </ul>
         </fieldset>
-        <button class="order-form__button site-button" type="submit" name="button">отправить заявку</button>
-        <p class="order-form__note">* — Обязательные поля</p>
+        <div class="order-form__box container">
+          <button class="order-form__button site-button" type="submit" name="button" tabindex="1">отправить заявку</button>
+          <p class="order-form__note">* — Обязательные поля</p>
+        </div>
       </form>
     </main>
     <footer class="footer">

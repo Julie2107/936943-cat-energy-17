@@ -18,36 +18,44 @@
 
 @media (min-width: @tablet-width) {
   .order-form {
-    width: @tablet-width;
-    margin-bottom: 105px;
+    width: 768px;
+    margin-bottom: 52px;
+  }
+
+  .order-form__box {
+    display: flex;
+    padding-left: 40px;
   }
 
   .order-form__button {
     width: 280px;
     margin: 0;
-    float: left;
-    margin-left: 71px;
+    margin-right: 64px;
   }
 
   .order-form__note {
     .font(16px, 400, 16px);
-    float: right;
     text-align: left;
-    width: 354px;
-    vertical-align: baseline;
-    margin-bottom: 20px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .order-form {
-    width: 1440px;
-    margin-bottom: 116px;
+    width: auto;
+    margin-bottom: 65px;
+    min-width: 1300px;
+    max-width: 1440px;
+  }
+
+  .order-form__box {
+    padding-left: 0;
   }
 
   .order-form__button {
     width: 568px;
-    margin-left: 110px;
+
+    margin-left: 0;
+    margin-right: 0;
   }
 
   .order-form__wrapper {
@@ -55,15 +63,14 @@
     justify-content: space-between;
     width: 1220px;
     .center-block;
-    margin-bottom: 68px;
+    margin-bottom: 71px;
   }
 
   .order-form__note {
-    float: right;
     text-align: left;
-    width: 680px;
+    /*width: 610px;*/
     vertical-align: baseline;
-    margin-left: 50px;
+    margin-left: 82px;
     margin-top: 15px;
   }
 }

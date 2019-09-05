@@ -1,7 +1,11 @@
 .add-range {
-  width: 320px;
   .center-block;
   border-top: 3px solid @green;
+}
+
+.add-range__title-box {
+  width: 320px;
+  .center-block();
 }
 
 .add-range__title {
@@ -17,6 +21,7 @@
 }
 
 .add-range__list {
+  width: 280px;
   list-style: none;
   padding: 0;
   margin: 0;
@@ -57,18 +62,24 @@
 
 @media (min-width: @tablet-width) {
   .add-range {
-    width: @tablet-width;
     margin-bottom: 75px;
+  }
+
+  .add-range__title-box {
+    width: 708px;
   }
 
   .add-range__title {
     width: 340px;
-    margin-left: 28px;
     padding-left: 39px;
     padding-right: 34px;
     .font(36px, 400, 36px);
     margin-top: -25px;
     margin-bottom: 80px;
+  }
+
+  .add-range__list {
+    width: auto;
   }
 
   .add-range__promo {
@@ -103,13 +114,15 @@
 
 @media (min-width: @desktop-width) {
   .add-range {
-    width: 1440px;
     margin-bottom: 86px;
     /*padding-bottom: 80px;*/
   }
 
+  .add-range__title-box {
+    width: 1300px;
+  }
+
   .add-range__title {
-    margin-left: 70px;
     padding-left: 38px;
   }
 
